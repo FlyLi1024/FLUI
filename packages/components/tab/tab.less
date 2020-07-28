@@ -1,0 +1,47 @@
+.kad-tab {
+  &-nav {
+    position: relative;
+    height: 88px;
+    background: #fff;
+    border-bottom: 1px solid #F0F0F0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+
+    .item {
+      flex-shrink: 0;
+      height: 88px;
+      line-height: 88px;
+      color: #131313;
+      font-size: 26px;
+      text-align: center;
+      box-sizing: border-box;
+
+      &:last-of-type {
+        border-right: 0 none !important;
+      }
+
+      flex: 1;
+
+      span {
+        padding: 0 40px;
+      }
+
+      &.actv {
+        color: #3F99FF;
+      }
+    }
+
+    .line {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 4px;
+      width: 0;
+      background: #3F99FF;
+    }
+  }
+}

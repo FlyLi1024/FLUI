@@ -1,0 +1,18 @@
+node_modules/
+doc/
+src/
+public/
+dist/
+build/
+config/
+
+# 忽略指定文件
+.babelrc
+postcss.config.js
+yarn.lock
+.eslintrc.js
+.eslintignore
+.npmignore
+.gitignore
+*.map
+*.vscode

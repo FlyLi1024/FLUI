@@ -1,0 +1,55 @@
+@import '../../style/mixin.less';
+
+.kad-submit-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: #fff;
+  font-size: 28px;
+  color: #444444;
+
+  &__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+  }
+
+  &__left {
+    padding-left: 30px;
+  }
+
+  &__currency {
+    color: #ff4040;
+    font-size: 36px;
+    margin-right: 10px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__price {
+    color: #ff4040;
+    font-size: 36px;
+  }
+
+  &__postage {
+    color: #b5b5b5;
+    font-size: 21px;
+    margin-top: 10px;
+  }
+
+  &__text {
+    padding-right: 30px;
+  }
+
+  &__button {
+    width: 230px;
+    height: 100%;
+  }
+}

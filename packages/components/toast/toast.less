@@ -1,0 +1,61 @@
+@import '../../style/mixin.less';
+@import '../../style/animation.less';
+
+.kad-toast {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20200605;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  background: none;
+
+  .content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 20200605;
+    transform: translate(-50%, -50%);
+    max-width: 70%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+
+    .icon {
+      width: 80px;
+      padding: 20px;
+      font-size: 60px;
+    }
+
+    .kad-icon {
+      font-size: 60px;
+    }
+
+    .text {
+      font-size: 28px;
+      border-radius: 4px;
+      box-sizing: border-box;
+      line-height: 1.5;
+    }
+
+    &.horizontal {
+      flex-direction: row;
+      padding: 16px 20px;
+
+      .icon {
+        width: auto;
+        font-size: 30px;
+        padding: 0 10px 0 0;
+      }
+    }
+  }
+}

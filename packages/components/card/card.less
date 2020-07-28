@@ -1,0 +1,666 @@
+@import '../../style/mixin.less';
+
+.kad-card-theme1 {
+  display: inline-block;
+  position: relative;
+  width: 344px;
+  height: 460px;
+  background: #fff;
+  border-radius: 16px;
+
+  .desc,
+  .factory,
+  .label,
+  .num,
+  .btn {
+    display: none;
+  }
+
+  .pic180 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 276px;
+
+    img {
+      display: block;
+      width: 240px;
+      height: 240px;
+    }
+  }
+
+  .title {
+    font-size: 28px;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 42px;
+    height: 84px;
+    word-break: break-all;
+    padding: 4px 20px;
+    .text-over(2);
+  }
+
+  .priceSpec {
+    position: absolute;
+    left: 0;
+    bottom: 38px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Microsoft YaHei;
+
+    .price {
+      font-size: 34px;
+      color: #ff423f;
+    }
+
+    .origin-price {
+      color: #aaa;
+      font-size: 22px;
+      text-decoration: line-through;
+    }
+  }
+
+  .rmb {
+    font-size: 24px;
+  }
+
+  .label-pic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 16px 0 0 0;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.kad-card-theme2 {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 284px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    right: 20px;
+    height: 1px;
+    border-bottom: 1px solid #f0f0f0;
+    transform-origin: left bottom;
+    transform: scaleY(0.5);
+  }
+
+  .label,
+  .num,
+  .desc,
+  .origin-price {
+    display: none;
+  }
+
+  .pic180 {
+    flex-shrink: 0;
+    width: 240px;
+    height: 240px;
+
+    img {
+      display: block;
+      width: 240px;
+      height: 240px;
+      border: none;
+    }
+  }
+
+  .content {
+    position: relative;
+    flex: 1;
+    box-sizing: border-box;
+    height: 100%;
+    padding-left: 30px;
+    justify-content: flex-start;
+    flex-direction: column;
+    word-break: break-all;
+  }
+
+  .title {
+    font-size: 28px;
+    color: #000;
+    line-height: 42px;
+    margin-top: 8px;
+    word-break: break-all;
+    .text-over(2);
+  }
+
+  .factory {
+    color: #888;
+    font-size: 24px;
+    margin-top: 10px;
+    line-height: 1.5;
+    .text-over(2);
+  }
+
+  .priceSpec {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+
+    .price {
+      font-size: 34px;
+      color: #ff4040;
+    }
+
+    .rmb {
+      font-size: 24px;
+      padding-right: 2px;
+    }
+  }
+
+  .btn {
+    position: absolute;
+    right: 30px;
+    bottom: 46px;
+    width: 60px;
+    height: 60px;
+    background: rgb(248, 57, 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+  }
+
+  .label-pic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+
+    img {
+      display: block;
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.kad-card-theme3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #fff;
+  position: relative;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    right: 20px;
+    height: 1px;
+    border-bottom: 1px solid #f0f0f0;
+    transform-origin: left bottom;
+    transform: scaleY(0.5);
+  }
+
+  .pic180 {
+    flex-shrink: 0;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    .border-1px(0px, #e3e3e3);
+
+    img {
+      display: block;
+      width: 126px;
+      height: 126px;
+    }
+  }
+
+  .content {
+    flex: 1;
+    height: 100%;
+    padding-left: 30px;
+    position: relative;
+  }
+
+  .title {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 38px;
+    padding-top: 8px;
+    word-break: break-all;
+    .text-over(2);
+  }
+
+  .priceSpec {
+    position: absolute;
+    left: 30px;
+    top: 106px;
+    line-height: 1;
+
+    .price {
+      font-size: 30px;
+      color: #141414;
+    }
+
+    .rmb {
+      font-size: 24px;
+    }
+  }
+
+  .num {
+    position: absolute;
+    right: 0;
+    top: 106px;
+    font-size: 26px;
+    color: #999;
+  }
+}
+
+.kad-card-theme4 {
+  display: inline-block;
+  position: relative;
+  width: 346px;
+  height: 540px;
+  background: #fff;
+  border-radius: 16px;
+  vertical-align: top;
+
+  .desc,
+  .label,
+  .num {
+    display: none;
+  }
+
+  .pic180 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 290px;
+
+    img {
+      display: block;
+      width: 260px;
+      height: 260px;
+    }
+  }
+
+  .content {
+    position: relative;
+    height: 250px;
+  }
+
+  .title {
+    font-size: 28px;
+    font-weight: 400;
+    color: #000;
+    line-height: 42px;
+    // height: 168px;
+    word-break: break-all;
+    padding: 4px 20px;
+    .text-over(2);
+  }
+
+  .factory {
+    font-size: 24px;
+    color: #888;
+    padding: 0 20px;
+    .text-over(1);
+    line-height: 44px;
+  }
+
+  .priceSpec {
+    position: absolute;
+    bottom: 76px;
+    left: 0;
+    line-height: 1;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Microsoft YaHei;
+
+    .price {
+      line-height: 1;
+      font-size: 34px;
+      color: #ff423f;
+    }
+
+    .promotion {
+      display: inline-block;
+      position: relative;
+      height: 48px;
+      line-height: 48px;
+      padding: 0 8px;
+      margin-left: 10px;
+      color: #fff;
+      font-size: 36px;
+      border-radius: 0 16px 16px 16px;
+      background: linear-gradient(-52deg, rgba(255, 64, 64, 1), rgba(255, 102, 0, 1));
+      transform: scale(0.5);
+      transform-origin: 0 50%;
+    }
+
+    .origin-price {
+      color: #aaa;
+      font-size: 22px;
+      text-decoration: line-through;
+    }
+  }
+
+  .rmb {
+    font-size: 20px;
+  }
+
+  .qi {
+    font-size: 24px;
+  }
+
+  .mark {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    white-space: nowrap;
+    padding: 0 40px;
+    height: 52px;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    padding-bottom: 8px;
+
+    span {
+      position: relative;
+      width: 170px;
+      height: 52px;
+      display: inline-flex;
+      box-sizing: border-box;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      .border-1px(8px, red);
+      color: rgb(255, 64, 64);
+      // background: linear-gradient(-52deg, rgba(255, 64, 64, 1) 0%, rgba(255, 102, 0, 1) 100%);
+      // background-clip: text;
+      // -webkit-text-fill-color: transparent;
+      font-size: 36px;
+
+      &:nth-of-type(2) {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  .stock {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    padding-bottom: 8px;
+
+    span {
+      font-size: 24px;
+      color: #BABABA;
+    }
+  }
+
+  .btn {
+    position: absolute;
+    right: 18px;
+    bottom: 30px;
+    width: 120px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border: 1px solid;
+      border-radius: 50%;
+      color: #FF4040;
+      background-color: #fff;
+      box-sizing: border-box;
+    }
+  }
+
+  .label-pic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 16px 0 0 0;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+
+.kad-card-theme5 {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 284px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    right: 20px;
+    height: 1px;
+    border-bottom: 1px solid #f0f0f0;
+    transform-origin: left bottom;
+    transform: scaleY(0.5);
+  }
+
+  .label,
+  .num,
+  .desc,
+  .origin-price {
+    display: none;
+  }
+
+  .pic180 {
+    flex-shrink: 0;
+    width: 240px;
+    height: 240px;
+
+    img {
+      display: block;
+      width: 240px;
+      height: 240px;
+      border: none;
+    }
+  }
+
+  .content {
+    position: relative;
+    flex: 1;
+    box-sizing: border-box;
+    height: 100%;
+    padding-left: 30px;
+    justify-content: flex-start;
+    flex-direction: column;
+    word-break: break-all;
+    overflow: hidden;
+  }
+
+  .title {
+    font-size: 28px;
+    color: #000;
+    line-height: 42px;
+    margin-top: 10px;
+    word-break: break-all;
+    .text-over(2);
+  }
+
+  .factory {
+    color: #888;
+    font-size: 24px;
+    margin-top: 10px;
+    line-height: 1.5;
+    .text-over(1);
+  }
+
+  .priceSpec {
+    position: absolute;
+    left: 20px;
+    bottom: 50px;
+
+    .price {
+      font-size: 34px;
+      color: #ff4040;
+    }
+
+    .promotion {
+      display: inline-block;
+      position: relative;
+      height: 48px;
+      line-height: 48px;
+      padding: 0 8px;
+      margin-left: 10px;
+      color: #fff;
+      font-size: 36px;
+      border-radius: 0 16px 16px 16px;
+      background: linear-gradient(-52deg, rgba(255, 64, 64, 1), rgba(255, 102, 0, 1));
+      transform: scale(0.5);
+      transform-origin: 0 50%;
+    }
+
+    .qi {
+      font-size: 24px;
+    }
+
+    .rmb {
+      font-size: 20px;
+      padding-right: 2px;
+    }
+  }
+
+  .mark {
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    white-space: nowrap;
+    padding: 0 40px;
+    height: 56px;
+    transform: scale(0.5);
+    transform-origin: 0 100%;
+
+    span {
+      position: relative;
+      width: 170px;
+      height: 52px;
+      display: inline-flex;
+      box-sizing: border-box;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: rgb(255, 64, 64);
+      // background: linear-gradient(-52deg, rgba(255, 64, 64, 1) 0%, rgba(255, 102, 0, 1) 100%);
+      // background-clip: text;
+      // -webkit-text-fill-color: transparent;
+      .border-1px(8px, red);
+      font-size: 36px;
+
+      &:nth-of-type(2) {
+        margin-left: 16px;
+      }
+    }
+
+
+  }
+
+  .stock {
+    position: absolute;
+    bottom: 16px;
+    left: 20px;
+
+    span {
+      font-size: 24px;
+      color: #BABABA;
+    }
+  }
+
+  .btn {
+    position: absolute;
+    right: 18px;
+    bottom: 38px;
+    width: 120px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border: 1px solid;
+      border-radius: 50%;
+      color: #FF4040;
+      background-color: #fff;
+      box-sizing: border-box;
+    }
+  }
+
+  .label-pic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+
+    img {
+      display: block;
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
