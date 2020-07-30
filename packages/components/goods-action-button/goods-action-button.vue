@@ -1,5 +1,5 @@
 <template>
-  <kad-button :color="color" class="kad-goods-action__button">{{ text }}</kad-button>
+  <l-button :color="color" class="kad-goods-action__button">{{ text }}</l-button>
 </template>
 
 <script>

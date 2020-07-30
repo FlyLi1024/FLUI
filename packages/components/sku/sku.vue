@@ -8,7 +8,7 @@
         <div class="kad-sku__body--header">
           <slot name="sku-header"></slot>
           <span class="close" @click="handleClose">
-            <kad-icon icon="close" size="13px" color="#141414"></kad-icon>
+            <l-icon icon="close" size="13px" color="#141414"></l-icon>
           </span>
         </div>
         <div class="kad-sku__body--wraper">
@@ -28,12 +28,12 @@
 export default {
   name: 'KadSku',
   props: {
-    visible: Boolean,
+    visible: Boolean
   },
   methods: {
     handleClose() {
       this.$emit('update:visible', false);
-    },
-  },
+    }
+  }
 };
 </script>

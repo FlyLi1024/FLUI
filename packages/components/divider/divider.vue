@@ -2,7 +2,7 @@
   <div class="kad-divider">
     <div class="kad-divider-line" :style="{ width: fixpx(lineWidth) }" v-if="line"></div>
     <div class="kad-divider-icon" v-if="icon">
-      <kad-icon :icon="icon" size="30px" :spin="loading"></kad-icon>
+      <l-icon :icon="icon" size="30px" :spin="loading"></l-icon>
     </div>
     <div class="kad-divider-text"><slot></slot></div>
     <div class="kad-divider-line" :style="{ width: fixpx(lineWidth) }" v-if="line"></div>
@@ -16,32 +16,32 @@ export default {
   props: {
     line: {
       type: Boolean,
-      default: true,
+      default: true
     },
     lineWidth: {
       type: String,
-      default: '85px',
+      default: '85px'
     },
     loading: {
       type: Boolean,
-      default: false,
+      default: false
     },
     icon: {
       type: String,
-      default: '',
-    },
+      default: ''
+    }
   },
   computed: {
     colorStyle() {
       return {
-        color: this.color,
+        color: this.color
       };
-    },
+    }
   },
   methods: {
     fixpx(val) {
       return parseInt(val, 0) / rootValue + 'rem';
-    },
-  },
+    }
+  }
 };
 </script>

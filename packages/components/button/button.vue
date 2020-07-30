@@ -1,7 +1,7 @@
 <template>
-  <button class="kad-button kad-button--normal" :class="classes" :style="styles" @click="handleClick">
-    <span class="kad-button__text">
-      <kad-icon :icon="icon" :spin="loading" v-if="icon"></kad-icon>
+  <button class="l-button" :class="classes" :style="styles" @click="handleClick">
+    <span class="l-button__text">
+      <l-icon :icon="icon" :spin="loading" v-if="icon"></l-icon>
       <span class="spacing" v-if="$slots.default && icon"></span>
       <slot></slot>
     </span>
@@ -9,7 +9,7 @@
 </template>
 <script>
 export default {
-  name: 'KadButton',
+  name: 'lButton',
   props: {
     type: String,
     loading: Boolean,
@@ -19,7 +19,7 @@ export default {
     full: Boolean,
     size: String,
     icon: String,
-    color: String,
+    color: String
   },
   computed: {
     styles() {
@@ -27,21 +27,21 @@ export default {
     },
     classes() {
       return [
-        this.type && `kad-button--${this.type}`,
-        this.size && `kad-button--${this.size}`,
-        this.plain && `kad-button--${this.type}--plain`,
+        this.type && `l-button--${this.type}`,
+        this.size && `l-button--${this.size}`,
+        this.plain && `l-button--${this.type}--plain`,
         {
-          'kad-button--round': this.round,
-          'kad-button--disabled': this.disabled,
-          'kad-button--full': this.full,
-        },
+          'l-button--round': this.round,
+          'l-button--disabled': this.disabled,
+          'l-button--full': this.full
+        }
       ];
-    },
+    }
   },
   methods: {
     handleClick(evt) {
       this.$emit('click', evt);
-    },
-  },
+    }
+  }
 };
 </script>

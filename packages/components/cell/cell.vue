@@ -6,7 +6,7 @@
       <slot></slot>
     </div>
     <div class="kad-cell__value" v-if="value !== ''">{{ value }}</div>
-    <kad-icon :icon="icon" :size="size" v-if="showIcon" :class="rotate ? 'kad-cell__rotate' : ''" @click="handleIcon"></kad-icon>
+    <l-icon :icon="icon" :size="size" v-if="showIcon" :class="rotate ? 'kad-cell__rotate' : ''" @click="handleIcon"></l-icon>
     <!-- :class="rotate2?'kad-cell__rotate':''" -->
   </div>
 </template>
@@ -18,42 +18,42 @@ export default {
     // 左侧内容,不输入内容不显示
     title: {
       type: String,
-      default: '',
+      default: ''
     },
     // 描述,不输入内容不显示
     label: {
       type: String,
-      default: '',
+      default: ''
     },
     // 右侧内容,不输入内容不显示
     value: {
       type: String,
-      default: '',
+      default: ''
     },
     // 显示右侧icon
     showIcon: {
       type: Boolean,
-      default: true,
+      default: true
     },
     // 右侧icon类型
     icon: {
       type: String,
-      default: 'down',
+      default: 'down'
     },
     // 右侧icon大小
     size: {
       type: String,
-      default: '26px',
+      default: '13px'
     },
     // 是否显示下边框
     showBorder: {
       type: Boolean,
-      default: true,
+      default: true
     },
     rotate: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   methods: {
     handleClick() {
@@ -61,7 +61,7 @@ export default {
     },
     handleIcon() {
       this.$emit('IconClick');
-    },
-  },
+    }
+  }
 };
 </script>

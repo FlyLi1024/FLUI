@@ -3,11 +3,11 @@
     <div class="kad-goods-action__bar">
       <slot></slot>
       <!-- <div class="kad-goods-action__right" v-if="inStock === 0">
-          <kad-button color="#05A5F9" class="kad-goods-action__button">加入购物车</kad-button>
-          <kad-button color="#FF423F" class="kad-goods-action__button">立即购买</kad-button>
+          <l-button color="#05A5F9" class="kad-goods-action__button">加入购物车</l-button>
+          <l-button color="#FF423F" class="kad-goods-action__button">立即购买</l-button>
       </div>
       <div class="kad-goods-action__right" v-if="inStock === 1">
-        <kad-button color="#FF7624" class="kad-goods-action__button">到货通知</kad-button>
+        <l-button color="#FF7624" class="kad-goods-action__button">到货通知</l-button>
       </div> -->
     </div>
   </div>

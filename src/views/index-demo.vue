@@ -2,7 +2,7 @@
   <div class="demo">
     <div class="preview-header">
       <span @click="ToHome">
-        <kad-icon icon="left" size="40px"></kad-icon>
+        <l-icon icon="left" size="20px"></l-icon>
       </span>
       {{ RouterName }}
     </div>
@@ -16,18 +16,18 @@ export default {
   computed: {
     RouterName() {
       return this.$route.query.cname;
-    },
+    }
   },
   methods: {
     ToHome() {
       this.$router.push({ path: '/' });
-    },
-  },
+    }
+  }
 };
 </script>
 <style lang="less" scoped>
 .h88 {
-  height: 88px;
+  height: 44px;
 }
 .preview-header {
   position: fixed;
@@ -35,19 +35,19 @@ export default {
   top: 0;
   z-index: 10;
   width: 100%;
-  height: 88px;
-  line-height: 88px;
+  height: 44px;
+  line-height: 44px;
   background: #474a4f;
   color: #fff;
   text-align: center;
-  font-size: 36px;
+  font-size: 18px;
   span {
     position: absolute;
     left: 0;
     top: 0;
     display: block;
-    height: 88px;
-    width: 88px;
+    height: 44px;
+    width: 44px;
   }
 }
 </style>

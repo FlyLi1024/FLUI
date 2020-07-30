@@ -33,7 +33,7 @@ export default {
       return `doc-${this.$router.currentRoute.path.split('/').pop()}`;
     },
     iconClass() {
-      return this.isExpanded ? 'kad-icon kad-icon-up' : 'kad-icon kad-icon-down';
+      return this.isExpanded ? 'l-icon l-icon-up' : 'l-icon l-icon-down';
     },
     controlText() {
       return this.isExpanded ? '隐藏代码' : '显示代码';

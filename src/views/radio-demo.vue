@@ -64,13 +64,13 @@ export default {
   data() {
     return {
       checkbox: false,
-      value: '苹果',
+      value: '苹果'
     };
-  },
+  }
 };
 </script>
 <style lang="less" scoped>
 /deep/ .kad-radio {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 </style>

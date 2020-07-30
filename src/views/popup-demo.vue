@@ -1,24 +1,24 @@
 <template>
   <div class="kad-popup-demo">
     <kad-demo-block title="弹出位置">
-      <kad-button type="primary" @click="visible0 = true">中心弹出</kad-button>
-      <kad-button type="primary" @click="visible1 = true">顶部弹出</kad-button>
-      <kad-button type="primary" @click="visible2 = true">右侧弹出</kad-button>
-      <kad-button type="primary" @click="visible3 = true">底部弹出</kad-button>
-      <kad-button type="primary" @click="visible4 = true">左侧弹出</kad-button>
+      <l-button type="info" @click="visible0 = true">中心弹出</l-button>
+      <l-button type="info" @click="visible1 = true">顶部弹出</l-button>
+      <l-button type="info" @click="visible2 = true">右侧弹出</l-button>
+      <l-button type="info" @click="visible3 = true">底部弹出</l-button>
+      <l-button type="info" @click="visible4 = true">左侧弹出</l-button>
     </kad-demo-block>
     <kad-demo-block title="自定义宽高">
-      <kad-button type="primary" @click="visible5 = true">中心弹出</kad-button>
-      <kad-button type="primary" @click="visible6 = true">底部弹出</kad-button>
-      <kad-button type="primary" @click="visible7 = true">左侧弹出</kad-button>
+      <l-button type="info" @click="visible5 = true">中心弹出</l-button>
+      <l-button type="info" @click="visible6 = true">底部弹出</l-button>
+      <l-button type="info" @click="visible7 = true">左侧弹出</l-button>
     </kad-demo-block>
     <kad-demo-block title="自定义动画">
-      <kad-button type="primary" @click="visible8 = true">kad-fold</kad-button>
-      <kad-button type="primary" @click="visible9 = true">kad-scale</kad-button>
-      <kad-button type="primary" @click="visible10 = true">kad-spin</kad-button>
-      <kad-button type="primary" @click="visible11 = true">kad-flipX</kad-button>
-      <kad-button type="primary" @click="visible12 = true">kad-pop</kad-button>
-      <kad-button type="primary" @click="visible13 = true">kad-fade</kad-button>
+      <l-button type="info" @click="visible8 = true">kad-fold</l-button>
+      <l-button type="info" @click="visible9 = true">kad-scale</l-button>
+      <l-button type="info" @click="visible10 = true">kad-spin</l-button>
+      <l-button type="info" @click="visible11 = true">kad-flipX</l-button>
+      <l-button type="info" @click="visible12 = true">kad-pop</l-button>
+      <l-button type="info" @click="visible13 = true">kad-fade</l-button>
     </kad-demo-block>
     <kad-popup :visible.sync="visible0" position="center">
       <div class="popup-demo-item" v-for="(item, index) in 3" :key="index">
@@ -110,9 +110,9 @@ export default {
       visible10: false,
       visible11: false,
       visible12: false,
-      visible13: false,
+      visible13: false
     };
-  },
+  }
 };
 </script>
 
@@ -125,15 +125,15 @@ export default {
   // bottom: 0;
   // overflow: auto;
   .popup-demo-item {
-    min-width: 300px;
-    height: 100px;
-    line-height: 100px;
+    min-width: 150px;
+    height: 50px;
+    line-height: 50px;
     border-bottom: 1px solid #eee;
-    font-size: 30px;
+    font-size: 14px;
     color: #666;
     text-align: center;
   }
-  .kad-button {
+  .l-button {
     position: relative;
     margin-right: 20px;
     margin-top: 30px;

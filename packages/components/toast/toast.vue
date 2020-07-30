@@ -7,7 +7,7 @@
       <div class="kad-toast" v-if="visible">
         <div class="content" :class="{ horizontal: horizontal }">
           <div class="icon" v-if="icon">
-            <kad-icon class="kad-icon" :size="horizontal ? '16px' : '30px'" :icon="icon" :spin="loading"></kad-icon>
+            <l-icon class="l-icon" :size="horizontal ? '16px' : '30px'" :icon="icon" :spin="loading"></l-icon>
           </div>
           <div class="text">{{ content }}</div>
         </div>
@@ -29,8 +29,8 @@ export default {
       horizontal: false,
       anim: 'kad-fade',
       duration: 2000,
-      opacity: 0,
+      opacity: 0
     };
-  },
+  }
 };
 </script>

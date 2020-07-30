@@ -17,11 +17,11 @@ Vue.use(Icon);
 ::: demo
 
 ```html
-<kad-icon icon="people" size="20px"></kad-icon>
-<kad-icon icon="people" size="40px"></kad-icon>
-<kad-icon icon="people" size="60px"></kad-icon>
-<kad-icon icon="people" size="80px"></kad-icon>
-<kad-icon icon="people" size="100px"></kad-icon>
+<l-icon icon="people" size="20px"></l-icon>
+<l-icon icon="people" size="40px"></l-icon>
+<l-icon icon="people" size="60px"></l-icon>
+<l-icon icon="people" size="80px"></l-icon>
+<l-icon icon="people" size="100px"></l-icon>
 ```
 
 :::
@@ -32,10 +32,10 @@ Vue.use(Icon);
 ::: demo
 
 ```html
-<kad-icon icon="people" size="60px" color="#f6975f"></kad-icon>
-<kad-icon icon="people" size="60px" color="#07c160"></kad-icon>
-<kad-icon icon="people" size="60px" color="#1989fa"></kad-icon>
-<kad-icon icon="people" color="#f44" size="60px"></kad-icon>
+<l-icon icon="people" size="60px" color="#f6975f"></l-icon>
+<l-icon icon="people" size="60px" color="#07c160"></l-icon>
+<l-icon icon="people" size="60px" color="#1989fa"></l-icon>
+<l-icon icon="people" color="#f44" size="60px"></l-icon>
 ```
 
 :::
@@ -46,10 +46,10 @@ Vue.use(Icon);
 ::: demo
 
 ```html
-<kad-icon icon="loading-A" size="60px" color="#f6975f" spin></kad-icon>
-<kad-icon icon="loading-B" size="60px" color="#f6975f" spin></kad-icon>
-<kad-icon icon="loading-C" size="60px" color="#f6975f" spin></kad-icon>
-<kad-icon icon="loading-D" size="60px" color="#f6975f" spin></kad-icon>
+<l-icon icon="loading-A" size="60px" color="#f6975f" spin></l-icon>
+<l-icon icon="loading-B" size="60px" color="#f6975f" spin></l-icon>
+<l-icon icon="loading-C" size="60px" color="#f6975f" spin></l-icon>
+<l-icon icon="loading-D" size="60px" color="#f6975f" spin></l-icon>
 ```
 
 :::
@@ -63,7 +63,7 @@ Vue.use(Icon);
   <div class="icon-box">
     <div class="item" v-for="(item, index) in IconList" :key="index">
       <div class="icon">
-        <kad-icon :icon="item" size="60px"></kad-icon>
+        <l-icon :icon="item" size="60px"></l-icon>
       </div>
       <div class="name">{{ item }}</div>
     </div>

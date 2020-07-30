@@ -20,11 +20,11 @@ Vue.use(Popup);
 ```html
 <template>
   <div class="popup-demo">
-    <kad-button type="primary" @click="visible0 = true">中心弹出</kad-button>
-    <kad-button type="primary" @click="visible1 = true">顶部弹出</kad-button>
-    <kad-button type="primary" @click="visible2 = true">右侧弹出</kad-button>
-    <kad-button type="primary" @click="visible3 = true">底部弹出</kad-button>
-    <kad-button type="primary" @click="visible4 = true">左侧弹出</kad-button>
+    <l-button type="primary" @click="visible0 = true">中心弹出</l-button>
+    <l-button type="primary" @click="visible1 = true">顶部弹出</l-button>
+    <l-button type="primary" @click="visible2 = true">右侧弹出</l-button>
+    <l-button type="primary" @click="visible3 = true">底部弹出</l-button>
+    <l-button type="primary" @click="visible4 = true">左侧弹出</l-button>
 
     <kad-popup :visible.sync="visible0" position="center">
       <div class="popup-demo-item" v-for="(item, index) in 3" :key="index">
@@ -79,9 +79,9 @@ Vue.use(Popup);
 ```html
 <template>
   <div class="popup-demo">
-    <kad-button type="primary" @click="visible5 = true">中心弹出</kad-button>
-    <kad-button type="primary" @click="visible6 = true">底部弹出</kad-button>
-    <kad-button type="primary" @click="visible7 = true">左侧弹出</kad-button>
+    <l-button type="primary" @click="visible5 = true">中心弹出</l-button>
+    <l-button type="primary" @click="visible6 = true">底部弹出</l-button>
+    <l-button type="primary" @click="visible7 = true">左侧弹出</l-button>
 
     <kad-popup :visible.sync="visible5" :scroll="true" position="center" :styles="{ width: '400px', height: '500px' }">
       <div class="popup-demo-item" v-for="(item, index) in 20" :key="index">
@@ -124,12 +124,12 @@ Vue.use(Popup);
 ```html
 <template>
   <div class="popup-demo">
-    <kad-button type="primary" @click="visible8 = true">kad-fold</kad-button>
-    <kad-button type="primary" @click="visible9 = true">kad-scale</kad-button>
-    <kad-button type="primary" @click="visible10 = true">kad-spin</kad-button>
-    <kad-button type="primary" @click="visible11 = true">kad-flipX</kad-button>
-    <kad-button type="primary" @click="visible12 = true">kad-pop</kad-button>
-    <kad-button type="primary" @click="visible13 = true">kad-fade</kad-button>
+    <l-button type="primary" @click="visible8 = true">kad-fold</l-button>
+    <l-button type="primary" @click="visible9 = true">kad-scale</l-button>
+    <l-button type="primary" @click="visible10 = true">kad-spin</l-button>
+    <l-button type="primary" @click="visible11 = true">kad-flipX</l-button>
+    <l-button type="primary" @click="visible12 = true">kad-pop</l-button>
+    <l-button type="primary" @click="visible13 = true">kad-fade</l-button>
 
     <kad-popup :visible.sync="visible8" transition="kad-fold">
       <div class="popup-demo-item" v-for="(item, index) in 3" :key="index">

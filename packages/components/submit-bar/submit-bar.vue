@@ -12,7 +12,7 @@
           </div>
           <div class="kad-submit-bar__postage">{{ buttomLabel }}</div>
         </div>
-        <kad-button type="danger" class="kad-submit-bar__button">{{ buttonText }}({{ quantity }})</kad-button>
+        <l-button type="danger" class="kad-submit-bar__button">{{ buttonText }}({{ quantity }})</l-button>
       </div>
     </div>
   </div>

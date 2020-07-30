@@ -1,7 +1,7 @@
 <template>
   <div class="sku-demo">
     <kad-demo-block title="疗程优惠">
-      <kad-button type="info" @click="visible1 = true">疗程优惠</kad-button>
+      <l-button type="info" @click="visible1 = true">疗程优惠</l-button>
       <kad-sku :visible.sync="visible1">
         <template slot="sku-header">
           <div class="plan">
@@ -26,11 +26,11 @@
             <div>购买数量</div>
             <div class="sku-num__opt">
               <div class="reduce end">
-                <kad-icon icon="reduce"></kad-icon>
+                <l-icon icon="reduce"></l-icon>
               </div>
               <div class="quantity">1</div>
               <div class="add">
-                <kad-icon icon="add"></kad-icon>
+                <l-icon icon="add"></l-icon>
               </div>
             </div>
           </div>
@@ -39,13 +39,13 @@
           <div style="color: red; line-height: 50px;">此处新增需要自定义添加的布局</div>
         </template>
         <template slot="sku-actions">
-          <kad-button color="#05A5F9" full @click="addCart">加入购物车</kad-button>
-          <kad-button color="#FF423F" full>立即购买</kad-button>
+          <l-button color="#05A5F9" full @click="addCart">加入购物车</l-button>
+          <l-button color="#FF423F" full>立即购买</l-button>
         </template>
       </kad-sku>
     </kad-demo-block>
     <kad-demo-block title="隐形眼镜">
-      <kad-button type="info" @click="visible2 = true">隐形眼镜</kad-button>
+      <l-button type="info" @click="visible2 = true">隐形眼镜</l-button>
       <kad-sku :visible.sync="visible2">
         <template slot="sku-header">
           <div class="plan">
@@ -93,11 +93,11 @@
             <div>购买数量</div>
             <div class="sku-num__opt">
               <div class="reduce end">
-                <kad-icon icon="reduce"></kad-icon>
+                <l-icon icon="reduce"></l-icon>
               </div>
               <div class="quantity">1</div>
               <div class="add">
-                <kad-icon icon="add"></kad-icon>
+                <l-icon icon="add"></l-icon>
               </div>
             </div>
           </div>
@@ -106,7 +106,7 @@
           <div style="color: red; line-height: 50px;">此处新增需要自定义添加的布局</div>
         </template>
         <template slot="sku-actions">
-          <kad-button color="#FF7624" full>到货通知</kad-button>
+          <l-button color="#FF7624" full>到货通知</l-button>
         </template>
       </kad-sku>
     </kad-demo-block>
@@ -118,20 +118,20 @@ export default {
   data() {
     return {
       visible1: false,
-      visible2: false,
+      visible2: false
     };
   },
   methods: {
     addCart() {
       this.$loadingStart({
         content: '正在加入购物车',
-        anim: 'kad-scale',
+        anim: 'kad-scale'
       }),
         setTimeout(() => {
           this.$loadingEnd();
           this.$ktoast('加入购物车成功');
         }, 2000);
-    },
-  },
+    }
+  }
 };
 </script>

@@ -1,11 +1,11 @@
 <template>
   <div class="search" @touchmove.prevent>
     <div class="search__header">
-      <kad-icon icon="left" class="left" color="#ffffff" @click="handleBlack" />
+      <l-icon icon="left" class="left" color="#ffffff" @click="handleBlack" />
       <div class="search__inner" @touchmove.prevent>
-        <kad-icon icon="search" class="search" size="30" color="#C1C1C1" />
+        <l-icon icon="search" class="search" size="30" color="#C1C1C1" />
         <input type="text" :placeholder="placeholder" @input="handleInput" @keyup.13="handleKeyup" @focus="hanldeFocus" @blur="hanldeBlur" :value="value" />
-        <kad-icon icon="close" class="close" color="#E1E1E1" v-if="showClose" @click="hanldeClear" />
+        <l-icon icon="close" class="close" color="#E1E1E1" v-if="showClose" @click="hanldeClear" />
       </div>
       <div class="search__btn" @click="handleSearch(value)" v-if="!showSwitch">搜索</div>
       <div class="search__switch" @click="handleSwitch" v-if="showSwitch">
@@ -21,27 +21,27 @@ export default {
   props: {
     value: {
       type: String,
-      default: '',
+      default: ''
     },
     showSwitch: {
       type: Boolean,
-      default: false,
+      default: false
     },
     placeholder: {
       type: String,
-      default: '三七粉限时秒杀包邮',
-    },
+      default: '三七粉限时秒杀包邮'
+    }
   },
   data() {
     return {
       showClose: false,
-      switchValue: 1,
+      switchValue: 1
     };
   },
   watch: {
     value(newVal) {
       this.value !== '' ? (this.showClose = true) : (this.showClose = false);
-    },
+    }
   },
   methods: {
     // 点击搜索按钮
@@ -79,7 +79,7 @@ export default {
     },
     handleBlack() {
       this.$emit('black', event);
-    },
-  },
+    }
+  }
 };
 </script>

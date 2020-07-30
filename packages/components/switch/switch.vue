@@ -2,7 +2,7 @@
   <div class="kad-switch" :class="classes" :style="styles" @click.prevent="switchValue">
     <input class="kad-switch__input" type="checkbox" ref="switch" @change="handleChange" :name="name" :true-value="activeValue" :false-value="inactiveValue" @keydown.enter="switchValue" />
     <span class="kad-switch__core">
-      <kad-icon icon="loading-A" :color="activeColor" spin v-if="loading && checked"></kad-icon>
+      <l-icon icon="loading-A" :color="activeColor" spin v-if="loading && checked"></l-icon>
     </span>
   </div>
 </template>
@@ -13,36 +13,36 @@ export default {
   props: {
     value: {
       type: [Boolean, String, Number],
-      default: false,
+      default: false
     },
     disabled: {
       type: Boolean,
-      default: false,
+      default: false
     },
     loading: {
       type: Boolean,
-      default: false,
+      default: false
     },
     name: {
       type: String,
-      default: '',
+      default: ''
     },
     activeColor: {
       type: String,
-      default: '#04BE02',
+      default: '#04BE02'
     },
     inactiveColor: {
       type: String,
-      default: '#fff',
+      default: '#fff'
     },
     activeValue: {
       type: [Boolean, String, Number],
-      default: true,
+      default: true
     },
     inactiveValue: {
       type: [Boolean, String, Number],
-      default: false,
-    },
+      default: false
+    }
   },
   created() {
     if (!~[this.activeValue, this.inactiveValue].indexOf(this.value)) {
@@ -59,13 +59,13 @@ export default {
     styles() {
       return [
         {
-          'background-color': this.activeColor && this.checked ? this.activeColor : '',
+          'background-color': this.activeColor && this.checked ? this.activeColor : ''
         },
         {
-          'border-color': this.activeColor && this.checked ? this.activeColor : '',
-        },
+          'border-color': this.activeColor && this.checked ? this.activeColor : ''
+        }
       ];
-    },
+    }
   },
   methods: {
     handleClick(evt) {
@@ -81,12 +81,12 @@ export default {
     },
     switchValue() {
       !this.disabled && this.handleChange();
-    },
+    }
   },
   watch: {
     checked() {
       this.$refs.switch.checked = this.checked;
-    },
-  },
+    }
+  }
 };
 </script>

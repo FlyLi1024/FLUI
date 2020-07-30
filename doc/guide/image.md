@@ -81,7 +81,7 @@ Vue.use(Image);
     </kad-image>
     <kad-image :src="src" width="200px" height="200px">
       <template v-slot:loading>
-        <kad-icon icon="image" size="80px"></kad-icon>
+        <l-icon icon="image" size="80px"></l-icon>
       </template>
     </kad-image>
     <kad-image :src="src" width="200px" height="200px">

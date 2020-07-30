@@ -18,10 +18,10 @@
         </template> -->
         <template slot="btn">
           <div class="icon kefu">
-            <kad-icon icon="wechat" size="32px"></kad-icon>
+            <l-icon icon="wechat" size="32px"></l-icon>
           </div>
           <div class="icon cart">
-            <kad-icon icon="cart-add" size="32px"></kad-icon>
+            <l-icon icon="cart-add" size="32px"></l-icon>
           </div>
         </template>
       </kad-card>
@@ -45,10 +45,10 @@
         </template>
         <template slot="btn">
           <div class="icon kefu">
-            <kad-icon icon="wechat" size="32px"></kad-icon>
+            <l-icon icon="wechat" size="32px"></l-icon>
           </div>
           <div class="icon cart">
-            <kad-icon icon="cart-add" size="32px"></kad-icon>
+            <l-icon icon="cart-add" size="32px"></l-icon>
           </div>
         </template>
       </kad-card>
@@ -61,7 +61,7 @@
       <kad-card v-for="(item, index) in 3" :key="index" theme="2" thumb="http://image.360kad.com/group2/M00/85/06/CgAgFVtae82ATXOUAAHhVCKnkEY492.jpg_180x180.jpg" title="白云山中一 障眼明片白云山中一 障眼明片白云山中一 障眼明片（薄膜衣片）0.42g*50片" factory="厂家：江西药都樟树制药有限公司江西药都樟树制药有限公司" price="43.00" @click="ToDetail">
         <template slot="btn">
           <div class="icon cart" @click="btnEvent">
-            <kad-icon icon="add" size="34px"></kad-icon>
+            <l-icon icon="add" size="34px"></l-icon>
           </div>
         </template>
       </kad-card>
@@ -81,14 +81,14 @@ export default {
     btnEvent() {
       this.$loadingStart({
         content: '正在加入购物车',
-        anim: 'kad-scale',
+        anim: 'kad-scale'
       });
       setTimeout(() => {
         this.$loadingEnd();
         this.$ktoast('加入购物车成功');
       }, 3000);
-    },
-  },
+    }
+  }
 };
 </script>
 

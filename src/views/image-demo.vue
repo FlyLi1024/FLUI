@@ -18,7 +18,7 @@
       </kad-image>
       <kad-image :src="src" width="200px" height="200px">
         <template v-slot:loading>
-          <kad-icon icon="image" size="50px"></kad-icon>
+          <l-icon icon="image" size="50px"></l-icon>
         </template>
       </kad-image>
       <kad-image :src="src" width="200px" height="200px">
@@ -58,7 +58,7 @@
       </kad-image>
       <kad-image :src="src" width="200px" height="200px">
         <template v-slot:error>
-          <kad-icon icon="wrong" size="50px"></kad-icon>
+          <l-icon icon="wrong" size="50px"></l-icon>
         </template>
       </kad-image>
     </kad-demo-block>
@@ -72,9 +72,9 @@
 export default {
   data() {
     return {
-      src: 'https://image.360kad.com/group2/M00/D0/B8/CgAgFV2m0hmATaUxAABjSAy_3n8902.png',
+      src: 'https://image.360kad.com/group2/M00/D0/B8/CgAgFV2m0hmATaUxAABjSAy_3n8902.png'
     };
-  },
+  }
 };
 </script>
 

@@ -15,7 +15,7 @@
       <div class="btn received" v-if="theme === '1' && status === 1" @click="getCoupon">已经领取</div>
       <div class="rule" v-if="theme === '2'" :class="Tips === '快过期' || Tips == null ? '' : 'fs_grey'" @click="ToggleRule">
         <span>使用规则</span>
-        <kad-icon icon="down" size="22" :class="ShowRule ? 'rotate' : ''"></kad-icon>
+        <l-icon icon="down" size="22" :class="ShowRule ? 'rotate' : ''"></l-icon>
       </div>
 
       <div class="tag" v-if="theme === '2' && Tips !== null" :class="Tips === '快过期' ? '' : 'tag_grey'">
@@ -40,7 +40,7 @@ export default {
   props: {
     theme: {
       type: String,
-      default: '1',
+      default: '1'
     },
     DisAmtInt: [Number, String],
     DisAmtFloat: [Number, String],
@@ -51,7 +51,7 @@ export default {
     status: [Number],
     Tips: [String, null],
     ruleText1: [String],
-    ruleText2: [String],
+    ruleText2: [String]
     // ToggleRule: Function
   },
   methods: {
@@ -60,7 +60,7 @@ export default {
     },
     getCoupon() {
       this.$emit('click');
-    },
-  },
+    }
+  }
 };
 </script>

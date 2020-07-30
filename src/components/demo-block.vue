@@ -13,25 +13,25 @@ export default {
   props: {
     title: {
       type: String,
-      default: '',
+      default: ''
     },
     background: {
       type: String,
-      default: '',
+      default: ''
     },
     full: {
       type: [Boolean, String],
-      default: false,
-    },
-  },
+      default: false
+    }
+  }
 };
 </script>
 
 <style lang="less" scoped>
 .kad-demo-block {
-  margin-top: 40px;
+  padding-bottom: 20px;
   &__content {
-    padding: 10px 30px;
+    padding: 5px 15px;
     &.full {
       padding: 0;
     }
@@ -40,8 +40,8 @@ export default {
     margin: 0;
     color: rgba(69, 90, 100, 0.6);
     font-weight: normal;
-    font-size: 28px;
-    padding: 30px;
+    font-size: 14px;
+    padding: 15px;
   }
 }
 </style>

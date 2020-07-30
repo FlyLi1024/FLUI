@@ -5,51 +5,52 @@
       :class="{ checked: model === label, disabled: this.isDisabled }"
       :style="{
         'border-color': model === label ? colors : '#a5b1be',
-        width: fixpx(size),
-        height: fixpx(size),
+        width: size,
+        height: size
       }"
     >
       <span :style="{ background: model === label && colors }"></span>
     </div>
-    <template>{{ label }}</template>
+    <template
+      ><span class="kad-radio__label" :style="{ color: model === label && !this.isDisabled ? colors : model === label && this.isDisabled ? '#c0ccda' : 'inherit' }">{{ label }}</span></template
+    >
   </div>
 </template>
 <script>
-const { rootValue } = require('../../../config/index');
 export default {
   name: 'kadRadio',
   props: {
     label: {
       type: [String, Number],
-      required: true,
+      required: true
     },
     disabled: {
       type: Boolean,
-      default: false,
+      default: false
     },
     round: {
       type: Boolean,
-      default: true,
+      default: true
     },
     direction: {
       type: String,
-      default: 'vertical',
+      default: 'vertical'
     },
     color: {
       type: String,
-      default: '#05A5F9',
+      default: '#05A5F9'
     },
     size: {
       type: String,
-      default: '30px',
+      default: '15px'
     },
     propValue: {
-      type: [String, Number],
-    },
+      type: [String, Number]
+    }
   },
   model: {
     prop: 'propValue',
-    event: 'change',
+    event: 'change'
   },
   computed: {
     isVertical() {
@@ -67,19 +68,16 @@ export default {
       },
       set(newValue) {
         this.isGroup ? this.$parent.$emit('change', newValue) : this.$emit('change', newValue);
-      },
+      }
     },
     colors() {
       return this.$parent.color || this.color;
-    },
+    }
   },
   methods: {
-    fixpx(val) {
-      return parseInt(val, 0) / rootValue + 'rem';
-    },
     handleClick(event) {
       !this.isDisabled && (this.model = this.label);
-    },
-  },
+    }
+  }
 };
 </script>

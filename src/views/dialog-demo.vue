@@ -1,7 +1,7 @@
 <template>
   <div class="dialog-demo">
     <kad-demo-block title="弹出框">
-      <kad-button type="primary" @click="visible = true">弹出框</kad-button>
+      <l-button type="primary" @click="visible = true">弹出框</l-button>
       <kad-dialog :visible.sync="visible" :title="titleText" :cancel-button="cancelButton" :mask-closable="maskClosable" :cancel-button-text="cancelButtonText" :confirm-button-text="confirmButtonText" :radius="radius" :transition="transition" @cancel="handleCancel" @confirm="handleConfirm">
         是否清除历史
       </kad-dialog>
@@ -49,13 +49,13 @@ export default {
       cancelButtonText: '抗命',
       confirmButtonText: '遵旨',
       radius: '0',
-      transition: 'kad-scale',
+      transition: 'kad-scale'
     };
   },
   computed: {
     titleText() {
       return this.title ? '这是标题' : '';
-    },
+    }
   },
   methods: {
     handleCancel() {
@@ -71,8 +71,8 @@ export default {
         this.$ktoast.close();
       }, 1000);
       this.visible = false;
-    },
-  },
+    }
+  }
 };
 </script>
 <style lang="less" scoped>

@@ -65,11 +65,11 @@
 ::: tip 嵌套代码
 
 ```html
-<kad-button type="default" round>默认按钮</kad-button>
-<kad-button type="primary" round>主要按钮</kad-button>
-<kad-button type="info" round>信息按钮</kad-button>
-<kad-button type="danger" round>危险按钮</kad-button>
-<kad-button type="warning" round>警告按钮</kad-button>
+<l-button type="default" round>默认按钮</l-button>
+<l-button type="primary" round>主要按钮</l-button>
+<l-button type="info" round>信息按钮</l-button>
+<l-button type="danger" round>危险按钮</l-button>
+<l-button type="warning" round>警告按钮</l-button>
 ```
 
 :::
@@ -79,11 +79,11 @@
 `这是一个小的代码块`、`code`
 
 ```html
-<kad-button type="default" round>默认按钮</kad-button>
-<kad-button type="primary" round>主要按钮</kad-button>
-<kad-button type="info" round>信息按钮</kad-button>
-<kad-button type="danger" round>危险按钮</kad-button>
-<kad-button type="warning" round>警告按钮</kad-button>
+<l-button type="default" round>默认按钮</l-button>
+<l-button type="primary" round>主要按钮</l-button>
+<l-button type="info" round>信息按钮</l-button>
+<l-button type="danger" round>危险按钮</l-button>
+<l-button type="warning" round>警告按钮</l-button>
 ```
 
 ```css
@@ -109,12 +109,12 @@ body {
 
 ```html
 <template>
-  <kad-button @click="ToastAnim('kad-fade')">kad-fade</kad-button>
-  <kad-button type="default" @click="ToastAnim('kad-pop')">kad-pop</kad-button>
-  <kad-button type="primary" @click="ToastAnim('kad-flipX')">kad-flipX</kad-button>
-  <kad-button type="info" @click="ToastAnim('kad-spin')">kad-spin</kad-button>
-  <kad-button type="danger" @click="ToastAnim('kad-fold')">kad-fold</kad-button>
-  <kad-button type="warning" @click="ToastAnim('kad-scale')">kad-scale</kad-button>
+  <l-button @click="ToastAnim('kad-fade')">kad-fade</l-button>
+  <l-button type="default" @click="ToastAnim('kad-pop')">kad-pop</l-button>
+  <l-button type="primary" @click="ToastAnim('kad-flipX')">kad-flipX</l-button>
+  <l-button type="info" @click="ToastAnim('kad-spin')">kad-spin</l-button>
+  <l-button type="danger" @click="ToastAnim('kad-fold')">kad-fold</l-button>
+  <l-button type="warning" @click="ToastAnim('kad-scale')">kad-scale</l-button>
 </template>
 <script>
   export default {

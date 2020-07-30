@@ -25,12 +25,12 @@ Vue.use(Button).use(Icon);
 :::demo
 
 ```html
-<kad-button>无边框按钮</kad-button>
-<kad-button type="default">默认按钮</kad-button>
-<kad-button type="primary">主要按钮</kad-button>
-<kad-button type="info">信息按钮</kad-button>
-<kad-button type="danger">危险按钮</kad-button>
-<kad-button type="warning">警告按钮</kad-button>
+<l-button>无边框按钮</l-button>
+<l-button type="default">默认按钮</l-button>
+<l-button type="primary">主要按钮</l-button>
+<l-button type="info">信息按钮</l-button>
+<l-button type="danger">危险按钮</l-button>
+<l-button type="warning">警告按钮</l-button>
 ```
 
 :::
@@ -42,11 +42,11 @@ Vue.use(Button).use(Icon);
 :::demo
 
 ```html
-<kad-button type="default" plain>默认按钮</kad-button>
-<kad-button type="primary" plain>主要按钮</kad-button>
-<kad-button type="info" plain>信息按钮</kad-button>
-<kad-button type="danger" plain>危险按钮</kad-button>
-<kad-button type="warning" plain>警告按钮</kad-button>
+<l-button type="default" plain>默认按钮</l-button>
+<l-button type="primary" plain>主要按钮</l-button>
+<l-button type="info" plain>信息按钮</l-button>
+<l-button type="danger" plain>危险按钮</l-button>
+<l-button type="warning" plain>警告按钮</l-button>
 ```
 
 :::
@@ -58,11 +58,11 @@ Vue.use(Button).use(Icon);
 ::: demo
 
 ```html
-<kad-button type="default" round>默认按钮</kad-button>
-<kad-button type="primary" round>主要按钮</kad-button>
-<kad-button type="info" round>信息按钮</kad-button>
-<kad-button type="danger" round>危险按钮</kad-button>
-<kad-button type="warning" round>警告按钮</kad-button>
+<l-button type="default" round>默认按钮</l-button>
+<l-button type="primary" round>主要按钮</l-button>
+<l-button type="info" round>信息按钮</l-button>
+<l-button type="danger" round>危险按钮</l-button>
+<l-button type="warning" round>警告按钮</l-button>
 ```
 
 :::
@@ -74,10 +74,10 @@ Vue.use(Button).use(Icon);
 ::: demo
 
 ```html
-<kad-button type="primary" size="mini">迷你按钮</kad-button>
-<kad-button type="primary" size="small">小型按钮</kad-button>
-<kad-button type="primary">普通按钮</kad-button>
-<kad-button type="primary" size="large">大号按钮</kad-button>
+<l-button type="primary" size="mini">迷你按钮</l-button>
+<l-button type="primary" size="small">小型按钮</l-button>
+<l-button type="primary">普通按钮</l-button>
+<l-button type="primary" size="large">大号按钮</l-button>
 ```
 
 :::
@@ -89,9 +89,9 @@ Vue.use(Button).use(Icon);
 ::: demo
 
 ```html
-<kad-button color="#FF719A">自定义颜色</kad-button>
-<kad-button color="linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%)">线性渐变</kad-button>
-<kad-button color="radial-gradient(#FFE29F, #FFA99F,#FF719A)">径向渐变</kad-button>
+<l-button color="#FF719A">自定义颜色</l-button>
+<l-button color="linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%)">线性渐变</l-button>
+<l-button color="radial-gradient(#FFE29F, #FFA99F,#FF719A)">径向渐变</l-button>
 ```
 
 :::
@@ -103,7 +103,7 @@ Vue.use(Button).use(Icon);
 ::: demo
 
 ```html
-<kad-button type="primary" icon="delete">删除</kad-button>
+<l-button type="primary" icon="delete">删除</l-button>
 ```
 
 :::
@@ -115,10 +115,10 @@ Vue.use(Button).use(Icon);
 ::: demo
 
 ```html
-<kad-button type="primary" loading icon="loading-A">加载中</kad-button>
-<kad-button type="primary" loading icon="loading-B">加载中</kad-button>
-<kad-button type="primary" loading icon="loading-C">加载中</kad-button>
-<kad-button type="primary" loading icon="loading-D">加载中</kad-button>
+<l-button type="primary" loading icon="loading-A">加载中</l-button>
+<l-button type="primary" loading icon="loading-B">加载中</l-button>
+<l-button type="primary" loading icon="loading-C">加载中</l-button>
+<l-button type="primary" loading icon="loading-D">加载中</l-button>
 ```
 
 :::
@@ -130,7 +130,7 @@ Vue.use(Button).use(Icon);
 ::: demo
 
 ```html
-<kad-button type="primary" full>默认按钮</kad-button>
+<l-button type="primary" full>默认按钮</l-button>
 ```
 
 :::
@@ -142,11 +142,11 @@ Vue.use(Button).use(Icon);
 ::: demo
 
 ```html
-<kad-button type="default" disabled>默认按钮</kad-button>
-<kad-button type="primary" disabled>主要按钮</kad-button>
-<kad-button type="info" disabled>信息按钮</kad-button>
-<kad-button type="danger" disabled plain>危险按钮</kad-button>
-<kad-button type="warning" disabled round>警告按钮</kad-button>
+<l-button type="default" disabled>默认按钮</l-button>
+<l-button type="primary" disabled>主要按钮</l-button>
+<l-button type="info" disabled>信息按钮</l-button>
+<l-button type="danger" disabled plain>危险按钮</l-button>
+<l-button type="warning" disabled round>警告按钮</l-button>
 ```
 
 :::

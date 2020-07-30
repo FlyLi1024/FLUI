@@ -12,9 +12,9 @@ Vue.use(kadDesign);
 import '../packages/style/index.less';
 import './assets/normalize.less';
 
-if (platform === 'm') {
-  require('../packages/utils/rem.js');
-}
+// if (platform === 'm') {
+//   require('../packages/utils/rem.js');
+// }
 
 new Vue({
   router,
