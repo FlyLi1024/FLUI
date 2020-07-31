@@ -1,7 +1,7 @@
 <template>
-  <div class="kad-switch" :class="classes" :style="styles" @click.prevent="switchValue">
-    <input class="kad-switch__input" type="checkbox" ref="switch" @change="handleChange" :name="name" :true-value="activeValue" :false-value="inactiveValue" @keydown.enter="switchValue" />
-    <span class="kad-switch__core">
+  <div class="l-switch" :class="classes" :style="styles" @click.prevent="switchValue">
+    <input class="l-switch__input" type="checkbox" ref="switch" @change="handleChange" :name="name" :true-value="activeValue" :false-value="inactiveValue" @keydown.enter="switchValue" />
+    <span class="l-switch__core">
       <l-icon icon="loading-A" :color="activeColor" spin v-if="loading && checked"></l-icon>
     </span>
   </div>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'kadSwitch',
+  name: 'lSwitch',
   props: {
     value: {
       type: [Boolean, String, Number],

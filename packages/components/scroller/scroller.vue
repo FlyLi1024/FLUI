@@ -1,7 +1,7 @@
 <template>
-  <div class="scroller scroller-container" :class="scrollX ? 'horizontal' : 'vertical'">
-    <div class="scroller-wrapper" ref="scroller">
-      <div class="scroller-content">
+  <div class="l-scroller" :class="scrollX ? 'horizontal' : 'vertical'">
+    <div class="l-scroller-wrapper" ref="scroller">
+      <div class="l-scroller-content">
         <slot></slot>
       </div>
     </div>
@@ -9,27 +9,26 @@
 </template>
 <script>
 import BScroll from '@better-scroll/core';
-// const BScroll = require('@better-scroll/core');
 export default {
-  name: 'KadScroller',
+  name: 'lScroller',
   props: {
     scrollX: {
       type: Boolean,
-      default: false,
+      default: false
     },
     scrollY: {
       type: Boolean,
-      default: true,
+      default: true
     },
     bounce: {
       type: Boolean,
-      default: true,
+      default: true
     },
     eventPassthrough: {
       type: String,
-      default: '',
+      default: ''
     },
-    scroll: Function,
+    scroll: Function
   },
   mounted() {
     setTimeout(() => {
@@ -47,7 +46,7 @@ export default {
         click: true,
         bounce: this.bounce,
         probeType: 3,
-        eventPassthrough: this.scrollX ? 'vertical' : 'horizontal',
+        eventPassthrough: this.scrollX ? 'vertical' : 'horizontal'
       });
       this.bs.on('scroll', (pos) => {
         this.$emit('scroll', pos);
@@ -59,14 +58,14 @@ export default {
     // 刷新
     refresh() {
       this.bs && this.bs.refresh();
-    },
+    }
   },
   watch: {
     data() {
       setTimeout(() => {
         this.refresh();
       }, 20);
-    },
-  },
+    }
+  }
 };
 </script>

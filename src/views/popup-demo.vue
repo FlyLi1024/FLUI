@@ -1,95 +1,95 @@
 <template>
-  <div class="kad-popup-demo">
-    <kad-demo-block title="弹出位置">
+  <div class="l-popup-demo">
+    <l-demo-block title="弹出位置">
       <l-button type="info" @click="visible0 = true">中心弹出</l-button>
       <l-button type="info" @click="visible1 = true">顶部弹出</l-button>
       <l-button type="info" @click="visible2 = true">右侧弹出</l-button>
       <l-button type="info" @click="visible3 = true">底部弹出</l-button>
       <l-button type="info" @click="visible4 = true">左侧弹出</l-button>
-    </kad-demo-block>
-    <kad-demo-block title="自定义宽高">
+    </l-demo-block>
+    <l-demo-block title="自定义宽高">
       <l-button type="info" @click="visible5 = true">中心弹出</l-button>
       <l-button type="info" @click="visible6 = true">底部弹出</l-button>
       <l-button type="info" @click="visible7 = true">左侧弹出</l-button>
-    </kad-demo-block>
-    <kad-demo-block title="自定义动画">
-      <l-button type="info" @click="visible8 = true">kad-fold</l-button>
-      <l-button type="info" @click="visible9 = true">kad-scale</l-button>
-      <l-button type="info" @click="visible10 = true">kad-spin</l-button>
-      <l-button type="info" @click="visible11 = true">kad-flipX</l-button>
-      <l-button type="info" @click="visible12 = true">kad-pop</l-button>
-      <l-button type="info" @click="visible13 = true">kad-fade</l-button>
-    </kad-demo-block>
-    <kad-popup :visible.sync="visible0" position="center">
+    </l-demo-block>
+    <l-demo-block title="自定义动画">
+      <l-button type="info" @click="visible8 = true">l-fold</l-button>
+      <l-button type="info" @click="visible9 = true">l-scale</l-button>
+      <l-button type="info" @click="visible10 = true">l-spin</l-button>
+      <l-button type="info" @click="visible11 = true">l-flipX</l-button>
+      <l-button type="info" @click="visible12 = true">l-pop</l-button>
+      <l-button type="info" @click="visible13 = true">l-fade</l-button>
+    </l-demo-block>
+    <l-popup :visible.sync="visible0" position="center">
       <div class="popup-demo-item" v-for="(item, index) in 3" :key="index">
         内容
       </div>
-    </kad-popup>
-    <kad-popup :visible.sync="visible1" position="top">
+    </l-popup>
+    <l-popup :visible.sync="visible1" position="top">
       <div class="popup-demo-item" v-for="(item, index) in 3" :key="index">
         内容
       </div>
-    </kad-popup>
-    <kad-popup :visible.sync="visible2" position="right">
+    </l-popup>
+    <l-popup :visible.sync="visible2" position="right">
       <div class="popup-demo-item" v-for="(item, index) in 3" :key="index">
         内容
       </div>
-    </kad-popup>
-    <kad-popup :visible.sync="visible3" position="bottom">
+    </l-popup>
+    <l-popup :visible.sync="visible3" position="bottom">
       <div class="popup-demo-item" v-for="(item, index) in 3" :key="index">
         内容
       </div>
-    </kad-popup>
-    <kad-popup :visible.sync="visible4" position="left">
+    </l-popup>
+    <l-popup :visible.sync="visible4" position="left">
       <div class="popup-demo-item" v-for="(item, index) in 3" :key="index">
         内容
       </div>
-    </kad-popup>
-    <kad-popup :visible.sync="visible5" :scroll="true" position="center" :styles="{ width: '300px', height: '400px' }">
+    </l-popup>
+    <l-popup :visible.sync="visible5" :scroll="true" position="center" :styles="{ width: '300px', height: '400px' }">
       <div class="popup-demo-item" v-for="(item, index) in 20" :key="index">
         内容
       </div>
-    </kad-popup>
-    <kad-popup :visible.sync="visible6" :scroll="true" position="bottom" :styles="{ height: '350px' }">
+    </l-popup>
+    <l-popup :visible.sync="visible6" :scroll="true" position="bottom" :styles="{ height: '350px' }">
       <div class="popup-demo-item" v-for="(item, index) in 20" :key="index">
         内容
       </div>
-    </kad-popup>
-    <kad-popup :visible.sync="visible7" :scroll="true" position="left" :styles="{ width: '250px' }">
+    </l-popup>
+    <l-popup :visible.sync="visible7" :scroll="true" position="left" :styles="{ width: '250px' }">
       <div class="popup-demo-item" v-for="(item, index) in 20" :key="index">
         内容
       </div>
-    </kad-popup>
-    <kad-popup :visible.sync="visible8" transition="kad-fold">
+    </l-popup>
+    <l-popup :visible.sync="visible8" transition="l-fold">
       <div class="popup-demo-item" v-for="(item, index) in 3" :key="index">
         内容
       </div>
-    </kad-popup>
-    <kad-popup :visible.sync="visible9" transition="kad-scale">
+    </l-popup>
+    <l-popup :visible.sync="visible9" transition="l-scale">
       <div class="popup-demo-item" v-for="(item, index) in 3" :key="index">
         内容
       </div>
-    </kad-popup>
-    <kad-popup :visible.sync="visible10" transition="kad-spin">
+    </l-popup>
+    <l-popup :visible.sync="visible10" transition="l-spin">
       <div class="popup-demo-item" v-for="(item, index) in 3" :key="index">
         内容
       </div>
-    </kad-popup>
-    <kad-popup :visible.sync="visible11" transition="kad-flipX">
+    </l-popup>
+    <l-popup :visible.sync="visible11" transition="l-flipX">
       <div class="popup-demo-item" v-for="(item, index) in 3" :key="index">
         内容
       </div>
-    </kad-popup>
-    <kad-popup :visible.sync="visible12" transition="kad-pop">
+    </l-popup>
+    <l-popup :visible.sync="visible12" transition="l-pop">
       <div class="popup-demo-item" v-for="(item, index) in 3" :key="index">
         内容
       </div>
-    </kad-popup>
-    <kad-popup :visible.sync="visible13" transition="kad-fade">
+    </l-popup>
+    <l-popup :visible.sync="visible13" transition="l-fade">
       <div class="popup-demo-item" v-for="(item, index) in 3" :key="index">
         内容
       </div>
-    </kad-popup>
+    </l-popup>
   </div>
 </template>
 
@@ -117,7 +117,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.kad-popup-demo {
+.l-popup-demo {
   // position: fixed;
   // left: 0;
   // top: 0;

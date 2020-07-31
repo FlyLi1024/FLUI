@@ -9,11 +9,11 @@
       <p class="desc">基于 Vue2.x 设计的前端 UI 组件库</p>
     </header>
     <div v-for="(item, index) in Components" :key="index">
-      <kad-collapse>
-        <kad-collapse-item :title="item.category" style="box-shadow: 0 1px 5px #ebedf0; border-radius: 6px; margin-bottom: 20px;">
-          <kad-cell v-for="(itemChild, indexChild) in item.list" :key="indexChild" icon="right" :title="itemChild.component + ' ' + itemChild.title" @click="ToDemo(itemChild.component, itemChild.title)" />
-        </kad-collapse-item>
-      </kad-collapse>
+      <l-collapse>
+        <l-collapse-item :title="item.category" style="box-shadow: 0 1px 5px #ebedf0; border-radius: 6px; margin-bottom: 20px;">
+          <l-cell v-for="(itemChild, indexChild) in item.list" :key="indexChild" icon="right" :title="itemChild.component + ' ' + itemChild.title" @click="ToDemo(itemChild.component, itemChild.title)" />
+        </l-collapse-item>
+      </l-collapse>
     </div>
   </div>
 </template>
@@ -75,7 +75,7 @@ export default {
   }
 }
 
-div /deep/ .kad-collapse-item__cell {
+div /deep/ .l-collapse-item__cell {
   padding: 20px;
 }
 </style>

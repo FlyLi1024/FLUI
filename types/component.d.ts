@@ -28,7 +28,6 @@ export class Icon extends UIComponent {}
 export class Image extends UIComponent {}
 export class Loading extends UIComponent {}
 export class NoticeBar extends UIComponent {}
-export class NoResult extends UIComponent {}
 export class Overlay extends UIComponent {}
 export class Popup extends UIComponent {}
 export class Radio extends UIComponent {}

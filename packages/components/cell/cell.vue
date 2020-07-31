@@ -1,19 +1,19 @@
 <template>
-  <div class="kad-cell" @click="handleClick" :class="showBorder ? 'kad-cell__border' : ''">
-    <div class="kad-cell__con">
-      <div class="kad-cell__title" v-if="title !== ''">{{ title }}</div>
-      <div class="kad-cell__label" v-if="label !== ''">{{ label }}</div>
+  <div class="l-cell" @click="handleClick" :class="showBorder ? 'l-cell__border' : ''">
+    <div class="l-cell__con">
+      <div class="l-cell__title" v-if="title !== ''">{{ title }}</div>
+      <div class="l-cell__label" v-if="label !== ''">{{ label }}</div>
       <slot></slot>
     </div>
-    <div class="kad-cell__value" v-if="value !== ''">{{ value }}</div>
-    <l-icon :icon="icon" :size="size" v-if="showIcon" :class="rotate ? 'kad-cell__rotate' : ''" @click="handleIcon"></l-icon>
-    <!-- :class="rotate2?'kad-cell__rotate':''" -->
+    <div class="l-cell__value" v-if="value !== ''">{{ value }}</div>
+    <l-icon :icon="icon" :size="size" v-if="showIcon" :class="rotate ? 'l-cell__rotate' : ''" @click="handleIcon"></l-icon>
+    <!-- :class="rotate2?'l-cell__rotate':''" -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'kadCell',
+  name: 'lCell',
   props: {
     // 左侧内容,不输入内容不显示
     title: {

@@ -1,6 +1,6 @@
 <template>
   <div class="box button-demo">
-    <kad-demo-block title="自定义大小" full>
+    <l-demo-block title="自定义大小" full>
       <div class="row line">
         <div class="col">
           <l-icon icon="home" size="40px"></l-icon>
@@ -19,55 +19,55 @@
           <div class="icon-name">kefu-outline</div>
         </div>
       </div>
-    </kad-demo-block>
-    <kad-demo-block title="自定义颜色" full>
+    </l-demo-block>
+    <l-demo-block title="自定义颜色" full>
       <div class="row line">
         <div class="col">
-          <l-icon icon="home" color="#f6975f" size="60px"></l-icon>
+          <l-icon icon="home" color="#f6975f" size="30px"></l-icon>
           <div class="icon-name">home</div>
         </div>
         <div class="col">
-          <l-icon icon="people" color="#07c160" size="60px"></l-icon>
+          <l-icon icon="people" color="#07c160" size="30px"></l-icon>
           <div class="icon-name">people</div>
         </div>
         <div class="col">
-          <l-icon icon="kefu" color="#1989fa" size="60px"></l-icon>
+          <l-icon icon="kefu" color="#1989fa" size="30px"></l-icon>
           <div class="icon-name">kefu</div>
         </div>
         <div class="col">
-          <l-icon icon="kefu-outline" color="#f44" size="60px"></l-icon>
+          <l-icon icon="kefu-outline" color="#f44" size="30px"></l-icon>
           <div class="icon-name">kefu-outline</div>
         </div>
       </div>
-    </kad-demo-block>
-    <kad-demo-block title="旋转动画" full>
+    </l-demo-block>
+    <l-demo-block title="旋转动画" full>
       <div class="row line">
         <div class="col">
-          <l-icon icon="loading-A" size="60px" spin></l-icon>
+          <l-icon icon="loading-A" size="30px" spin></l-icon>
           <div class="icon-name">loading-A</div>
         </div>
         <div class="col">
-          <l-icon icon="loading-B" size="60px" spin></l-icon>
+          <l-icon icon="loading-B" size="30px" spin></l-icon>
           <div class="icon-name">loading-B</div>
         </div>
         <div class="col">
-          <l-icon icon="loading-C" size="60px" spin></l-icon>
+          <l-icon icon="loading-C" size="30px" spin></l-icon>
           <div class="icon-name">loading-C</div>
         </div>
         <div class="col">
-          <l-icon icon="loading-D" size="60px" spin></l-icon>
+          <l-icon icon="loading-D" size="30px" spin></l-icon>
           <div class="icon-name">loading-D</div>
         </div>
       </div>
-    </kad-demo-block>
-    <kad-demo-block title="所有ICON" full>
+    </l-demo-block>
+    <l-demo-block title="所有ICON" full>
       <div class="row all">
         <div class="col" v-for="(item, index) in IconList" :key="index">
-          <l-icon :icon="item" size="60px"></l-icon>
+          <l-icon :icon="item" size="30px"></l-icon>
           <div class="icon-name">{{ item }}</div>
         </div>
       </div>
-    </kad-demo-block>
+    </l-demo-block>
   </div>
 </template>
 
@@ -82,7 +82,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .box {
-  padding: 0 20px 40px;
+  padding: 0 10px 20px;
   .row {
     width: 100%;
     display: flex;
@@ -92,8 +92,8 @@ export default {
     .col {
       flex: 1;
       text-align: center;
-      min-height: 50px;
-      padding: 60px 0;
+      min-height: 15px;
+      padding: 15px 0;
       border: 1px solid #d6d3d3;
       border-right: 0;
       border-top: 0;
@@ -105,8 +105,8 @@ export default {
       }
     }
     .icon-name {
-      font-size: 26px;
-      padding-top: 60px;
+      font-size: 14px;
+      padding-top: 30px;
     }
     &.single {
       .col {

@@ -1,7 +1,7 @@
 <template>
-  <div class="kad-radio" :class="{ horizontal: isVertical === 'horizontal', round }" @click.stop="handleClick">
+  <div class="l-radio" :class="{ horizontal: isVertical === 'horizontal', round }" @click.stop="handleClick">
     <div
-      class="kad-radio__icon"
+      class="l-radio__icon"
       :class="{ checked: model === label, disabled: this.isDisabled }"
       :style="{
         'border-color': model === label ? colors : '#a5b1be',
@@ -12,13 +12,13 @@
       <span :style="{ background: model === label && colors }"></span>
     </div>
     <template
-      ><span class="kad-radio__label" :style="{ color: model === label && !this.isDisabled ? colors : model === label && this.isDisabled ? '#c0ccda' : 'inherit' }">{{ label }}</span></template
+      ><span class="l-radio__label" :style="{ color: model === label && !this.isDisabled ? colors : model === label && this.isDisabled ? '#c0ccda' : 'inherit' }">{{ label }}</span></template
     >
   </div>
 </template>
 <script>
 export default {
-  name: 'kadRadio',
+  name: 'lRadio',
   props: {
     label: {
       type: [String, Number],
@@ -57,7 +57,7 @@ export default {
       return this.$parent.direction || this.direction;
     },
     isGroup() {
-      return this.$parent.$options._componentTag === 'kad-radio-group';
+      return this.$parent.$options._componentTag === 'l-radio-group';
     },
     isDisabled() {
       return this.$parent.disabled || this.disabled;

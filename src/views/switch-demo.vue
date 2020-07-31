@@ -1,17 +1,17 @@
 <template>
   <div>
-    <kad-demo-block title="基础用法">
-      <kad-switch v-model="checked"></kad-switch>
-    </kad-demo-block>
-    <kad-demo-block title="禁止操作">
-      <kad-switch v-model="checked" disabled></kad-switch>
-    </kad-demo-block>
-    <kad-demo-block title="修改颜色">
-      <kad-switch v-model="checked" active-color="#f90"></kad-switch>
-    </kad-demo-block>
-    <kad-demo-block title="loading效果">
-      <kad-switch v-model="checked" active-color="#f90" loading></kad-switch>
-    </kad-demo-block>
+    <l-demo-block title="基础用法">
+      <l-switch v-model="checked"></l-switch>
+    </l-demo-block>
+    <l-demo-block title="禁止操作">
+      <l-switch v-model="checked" disabled></l-switch>
+    </l-demo-block>
+    <l-demo-block title="修改颜色">
+      <l-switch v-model="checked" active-color="#f90"></l-switch>
+    </l-demo-block>
+    <l-demo-block title="loading效果">
+      <l-switch v-model="checked" active-color="#f90" loading></l-switch>
+    </l-demo-block>
   </div>
 </template>
 
@@ -19,8 +19,8 @@
 export default {
   data() {
     return {
-      checked: true,
+      checked: true
     };
-  },
+  }
 };
 </script>

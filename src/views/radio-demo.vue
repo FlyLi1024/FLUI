@@ -1,61 +1,61 @@
 <template>
   <div>
-    <kad-demo-block title="">
+    <l-demo-block title="">
       <div style="background: #eee; padding: 20px 0; text-align: center;">当前选中：{{ value }}</div>
-    </kad-demo-block>
-    <kad-demo-block title="组使用(默认换行)">
-      <kad-radio-group v-model="value">
-        <kad-radio label="苹果"></kad-radio>
-        <kad-radio label="香蕉"></kad-radio>
-        <kad-radio label="菠萝"></kad-radio>
-        <kad-radio label="茄子"></kad-radio>
-      </kad-radio-group>
-    </kad-demo-block>
-    <kad-demo-block title="组使用(横向排列)">
-      <kad-radio-group v-model="value" direction="horizontal">
-        <kad-radio label="苹果"></kad-radio>
-        <kad-radio label="香蕉"></kad-radio>
-        <kad-radio label="菠萝"></kad-radio>
-        <kad-radio label="茄子"></kad-radio>
-      </kad-radio-group>
-    </kad-demo-block>
-    <kad-demo-block title="修改颜色">
-      <kad-radio-group v-model="value" direction="horizontal">
-        <kad-radio label="苹果" v-model="value" color="#cf5e4d"></kad-radio>
-        <kad-radio label="香蕉" v-model="value" color="#45b984"></kad-radio>
-        <kad-radio label="菠萝" v-model="value" color="#00bcd4"></kad-radio>
-        <kad-radio label="茄子" v-model="value" color="#d36eb0"></kad-radio>
-      </kad-radio-group>
-    </kad-demo-block>
-    <kad-demo-block title="正方形">
-      <kad-radio-group v-model="value" direction="horizontal">
-        <kad-radio label="苹果" v-model="value" color="#cf5e4d" :round="false"></kad-radio>
-        <kad-radio label="香蕉" v-model="value" color="#45b984" :round="false"></kad-radio>
-        <kad-radio label="菠萝" v-model="value" color="#00bcd4" :round="false"></kad-radio>
-        <kad-radio label="茄子" v-model="value" color="#d36eb0" :round="false"></kad-radio>
-      </kad-radio-group>
-    </kad-demo-block>
-    <kad-demo-block title="组禁用">
-      <kad-radio-group v-model="value" direction="horizontal" disabled>
-        <kad-radio label="苹果" v-model="value" color="#cf5e4d" :round="false"></kad-radio>
-        <kad-radio label="香蕉" v-model="value" color="#45b984" :round="false"></kad-radio>
-        <kad-radio label="菠萝" v-model="value" color="#00bcd4" :round="false"></kad-radio>
-        <kad-radio label="茄子" v-model="value" color="#d36eb0" :round="false"></kad-radio>
-      </kad-radio-group>
-    </kad-demo-block>
-    <kad-demo-block title="修改大小">
-      <kad-radio-group v-model="value" direction="horizontal">
-        <kad-radio label="苹果" v-model="value" color="#cf5e4d" size="50"></kad-radio>
-        <kad-radio label="香蕉" v-model="value" color="#45b984" size="50"></kad-radio>
-        <kad-radio label="菠萝" v-model="value" color="#00bcd4" size="50"></kad-radio>
-        <kad-radio label="茄子" v-model="value" color="#d36eb0" size="50"></kad-radio>
-      </kad-radio-group>
-    </kad-demo-block>
-    <kad-demo-block title="单个&单个禁用">
-      <kad-radio label="苹果" v-model="value"></kad-radio>
-      <kad-radio label="香蕉" v-model="value" disabled></kad-radio>
-      <kad-radio label="菠萝" v-model="value"></kad-radio>
-    </kad-demo-block>
+    </l-demo-block>
+    <l-demo-block title="组使用(默认换行)">
+      <l-radio-group v-model="value">
+        <l-radio label="苹果"></l-radio>
+        <l-radio label="香蕉"></l-radio>
+        <l-radio label="菠萝"></l-radio>
+        <l-radio label="茄子"></l-radio>
+      </l-radio-group>
+    </l-demo-block>
+    <l-demo-block title="组使用(横向排列)">
+      <l-radio-group v-model="value" direction="horizontal">
+        <l-radio label="苹果"></l-radio>
+        <l-radio label="香蕉"></l-radio>
+        <l-radio label="菠萝"></l-radio>
+        <l-radio label="茄子"></l-radio>
+      </l-radio-group>
+    </l-demo-block>
+    <l-demo-block title="修改颜色">
+      <l-radio-group v-model="value" direction="horizontal">
+        <l-radio label="苹果" v-model="value" color="#cf5e4d"></l-radio>
+        <l-radio label="香蕉" v-model="value" color="#45b984"></l-radio>
+        <l-radio label="菠萝" v-model="value" color="#00bcd4"></l-radio>
+        <l-radio label="茄子" v-model="value" color="#d36eb0"></l-radio>
+      </l-radio-group>
+    </l-demo-block>
+    <l-demo-block title="正方形">
+      <l-radio-group v-model="value" direction="horizontal">
+        <l-radio label="苹果" v-model="value" color="#cf5e4d" :round="false"></l-radio>
+        <l-radio label="香蕉" v-model="value" color="#45b984" :round="false"></l-radio>
+        <l-radio label="菠萝" v-model="value" color="#00bcd4" :round="false"></l-radio>
+        <l-radio label="茄子" v-model="value" color="#d36eb0" :round="false"></l-radio>
+      </l-radio-group>
+    </l-demo-block>
+    <l-demo-block title="组禁用">
+      <l-radio-group v-model="value" direction="horizontal" disabled>
+        <l-radio label="苹果" v-model="value" color="#cf5e4d" :round="false"></l-radio>
+        <l-radio label="香蕉" v-model="value" color="#45b984" :round="false"></l-radio>
+        <l-radio label="菠萝" v-model="value" color="#00bcd4" :round="false"></l-radio>
+        <l-radio label="茄子" v-model="value" color="#d36eb0" :round="false"></l-radio>
+      </l-radio-group>
+    </l-demo-block>
+    <l-demo-block title="修改大小">
+      <l-radio-group v-model="value" direction="horizontal">
+        <l-radio label="苹果" v-model="value" color="#cf5e4d" size="50"></l-radio>
+        <l-radio label="香蕉" v-model="value" color="#45b984" size="50"></l-radio>
+        <l-radio label="菠萝" v-model="value" color="#00bcd4" size="50"></l-radio>
+        <l-radio label="茄子" v-model="value" color="#d36eb0" size="50"></l-radio>
+      </l-radio-group>
+    </l-demo-block>
+    <l-demo-block title="单个&单个禁用">
+      <l-radio label="苹果" v-model="value"></l-radio>
+      <l-radio label="香蕉" v-model="value" disabled></l-radio>
+      <l-radio label="菠萝" v-model="value"></l-radio>
+    </l-demo-block>
   </div>
 </template>
 
@@ -70,7 +70,7 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-/deep/ .kad-radio {
+/deep/ .l-radio {
   margin-bottom: 20px;
 }
 </style>

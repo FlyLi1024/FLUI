@@ -1,7 +1,7 @@
 <template>
-  <section class="kad-demo-block">
-    <h2 class="kad-demo-block__title">{{ title }}</h2>
-    <div class="kad-demo-block__content" :class="{ full: full }" :style="{ background }">
+  <section class="l-demo-block">
+    <h2 class="l-demo-block__title">{{ title }}</h2>
+    <div class="l-demo-block__content" :class="{ full: full }" :style="{ background }">
       <slot></slot>
     </div>
   </section>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'kad-demo-block',
+  name: 'l-demo-block',
   props: {
     title: {
       type: String,
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.kad-demo-block {
+.l-demo-block {
   padding-bottom: 20px;
   &__content {
     padding: 5px 15px;

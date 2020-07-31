@@ -1,23 +1,23 @@
 <template>
-  <div class="kad-collapse">
+  <div class="l-collapse">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'kadCollapse',
+  name: 'lCollapse',
   props: {
     accordion: {
       type: Boolean,
-      defalut: false,
-    },
+      defalut: false
+    }
   },
   mounted() {
     this.accordion &&
       this.$children.map((item) => {
         item.setAccordion();
       });
-  },
+  }
 };
 </script>

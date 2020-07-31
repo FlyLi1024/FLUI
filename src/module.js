@@ -142,10 +142,6 @@ const Components = [
       {
         title: '返回顶部',
         component: 'back-top'
-      },
-      {
-        title: '搜索无结果',
-        component: 'no-result'
       }
     ]
   }

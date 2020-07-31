@@ -1,7 +1,7 @@
 <template>
-  <div class="kad-collapse-item" ref="collapseItem">
-    <kad-cell :title="title" :label="label" :value="value" :showIcon="showIcon" :icon="icon" :showBorder="showBorder" :rotate="showWrapper" @click="toggle" />
-    <div class="kad-collapse-item__panel" :style="{ height: showWrapper ? offHeight : 0 }">
+  <div class="l-collapse-item" ref="collapseItem">
+    <l-cell :title="title" :label="label" :value="value" :showIcon="showIcon" :icon="icon" :showBorder="showBorder" :rotate="showWrapper" @click="toggle" />
+    <div class="l-collapse-item__panel" :style="{ height: showWrapper ? offHeight : 0 }">
       <div ref="wrapper">
         <slot></slot>
       </div>
@@ -11,62 +11,62 @@
 
 <script>
 export default {
-  name: 'kadCollapseItem',
+  name: 'lCollapseItem',
   data() {
     return {
       showWrapper: false,
-      isAccordion: false,
+      isAccordion: false
     };
   },
   props: {
     // 左侧内容
     title: {
       type: String,
-      default: '',
+      default: ''
     },
     // 描述
     label: {
       type: String,
-      default: '',
+      default: ''
     },
     // 右侧内容
     value: {
       type: String,
-      default: '',
+      default: ''
     },
     // 显示右侧icon
     showIcon: {
       type: Boolean,
-      default: true,
+      default: true
     },
     // 右侧icon类型
     icon: {
       type: String,
-      default: 'down',
+      default: 'down'
     },
     // 右侧icon大小
     size: {
       type: String,
-      default: '13px',
+      default: '13px'
     },
     // 是否显示下边框
     showBorder: {
       type: Boolean,
-      default: true,
+      default: true
     },
     name: {
       type: String,
-      default: '',
+      default: ''
     },
     accordion: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   computed: {
     offHeight() {
       return this.$refs.wrapper.offsetHeight + 'px';
-    },
+    }
   },
   methods: {
     setAccordion() {
@@ -85,7 +85,7 @@ export default {
           }
         });
       }
-    },
-  },
+    }
+  }
 };
 </script>
