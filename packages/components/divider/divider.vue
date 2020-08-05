@@ -1,18 +1,17 @@
 <template>
-  <div class="kad-divider">
-    <div class="kad-divider-line" :style="{ width: fixpx(lineWidth) }" v-if="line"></div>
-    <div class="kad-divider-icon" v-if="icon">
-      <l-icon :icon="icon" size="30px" :spin="loading"></l-icon>
+  <div class="l-divider">
+    <div class="l-divider-line" :style="{ width: lineWidth }" v-if="line"></div>
+    <div class="l-divider-icon" v-if="icon">
+      <l-icon :icon="icon" :spin="loading"></l-icon>
     </div>
-    <div class="kad-divider-text"><slot></slot></div>
-    <div class="kad-divider-line" :style="{ width: fixpx(lineWidth) }" v-if="line"></div>
+    <div class="l-divider-text"><slot></slot></div>
+    <div class="l-divider-line" :style="{ width: lineWidth }" v-if="line"></div>
   </div>
 </template>
 
 <script>
-const { rootValue } = require('../../../config/index');
 export default {
-  name: 'KadDivider',
+  name: 'lDivider',
   props: {
     line: {
       type: Boolean,
@@ -36,11 +35,6 @@ export default {
       return {
         color: this.color
       };
-    }
-  },
-  methods: {
-    fixpx(val) {
-      return parseInt(val, 0) / rootValue + 'rem';
     }
   }
 };

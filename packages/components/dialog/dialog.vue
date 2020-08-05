@@ -1,61 +1,57 @@
 <template>
-  <div class="kad-dialog">
-    <kad-popup :visible="visible" position="center" :transition="transition" @update:visible="maskClosable && maskCancle()">
-      <div class="kad-dialog__content" :style="radius && `border-radius:${fixpx(radius)}`">
-        <div class="kad-dialog__header" v-if="title">{{ title }}</div>
-        <div class="kad-dialog__body">
+  <div class="l-dialog">
+    <l-popup :visible="visible" position="center" :transition="transition" @update:visible="maskClosable && maskCancle()">
+      <div class="l-dialog__content" :style="radius && `border-radius:${radius}`">
+        <div class="l-dialog__header" v-if="title">{{ title }}</div>
+        <div class="l-dialog__body">
           <slot></slot>
         </div>
-        <div class="kad-dialog__footer">
+        <div class="l-dialog__footer">
           <div class="dialog-btn cancel" v-if="cancelButton" @click="btnCancle">{{ cancelButtonText }}</div>
           <div class="dialog-btn confirm" @click="btnConfirm">{{ confirmButtonText }}</div>
         </div>
       </div>
-    </kad-popup>
+    </l-popup>
   </div>
 </template>
 <script>
-const { rootValue } = require('../../../config/index');
 export default {
-  name: 'kadDialog',
+  name: 'lDialog',
   props: {
     visible: {
       type: Boolean,
-      default: false,
+      default: false
     },
     transition: {
       type: String,
-      default: 'kad-scale',
+      default: 'l-scale'
     },
     title: {
       type: [String, Number],
-      default: '',
+      default: ''
     },
     radius: {
       type: [Number, String],
-      default: 0,
+      default: 0
     },
     cancelButton: {
       type: Boolean,
-      default: true,
+      default: true
     },
     cancelButtonText: {
       type: String,
-      default: '取消',
+      default: '取消'
     },
     confirmButtonText: {
       type: String,
-      default: '确认',
+      default: '确认'
     },
     maskClosable: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   methods: {
-    fixpx(val) {
-      return parseInt(val, 0) / rootValue + 'rem';
-    },
     btnConfirm(evt) {
       this.$emit('confirm', evt);
     },
@@ -64,7 +60,7 @@ export default {
     },
     maskCancle(evt) {
       this.$emit('update:visible', false);
-    },
-  },
+    }
+  }
 };
 </script>

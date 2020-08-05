@@ -1,17 +1,17 @@
 <template>
-  <div class="kad-grid">
+  <div class="l-grid">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'KadGrid',
+  name: 'lGrid',
   props: {
     columns: {
       type: [String, Number],
-      default: 5,
-    },
-  },
+      default: 5
+    }
+  }
 };
 </script>

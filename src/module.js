@@ -25,10 +25,6 @@ const Components = [
       {
         title: '区域滚动',
         component: 'scroller'
-      },
-      {
-        title: '通知栏',
-        component: 'notice-bar'
       }
     ]
   },
@@ -76,10 +72,6 @@ const Components = [
       {
         title: '轮播',
         component: 'swiper'
-      },
-      {
-        title: '弹出框',
-        component: 'dropdown-menu'
       }
     ]
   },
@@ -97,10 +89,6 @@ const Components = [
       {
         title: '底部导航',
         component: 'tabbar'
-      },
-      {
-        title: '商品导航',
-        component: 'goods-action'
       },
       {
         title: '标签栏',

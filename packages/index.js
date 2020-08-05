@@ -9,7 +9,7 @@ const install = (Vue) => {
   requireAll(ComponetList).forEach((component) => {
     Vue.component(component.default.name, component.default);
   });
-  Vue.prototype.$ktoast = Toast;
+  Vue.prototype.$ltoast = Toast;
   Vue.prototype.$loadingStart = Toast.loadingStart;
   Vue.prototype.$loadingEnd = Toast.loadingEnd;
 };
@@ -24,5 +24,5 @@ ComponetList.keys().forEach((component) => {
 export default {
   version,
   install,
-  ...Object.values(modules),
+  ...Object.values(modules)
 };

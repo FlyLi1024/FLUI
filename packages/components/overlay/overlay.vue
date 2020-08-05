@@ -1,18 +1,12 @@
 <template>
-  <div
-    class="kad-overlay"
-    v-show="show"
-    :style="[{ 'z-index': zIndex, background: 'rgba(0,0,0,' + opacity + ')' }]"
-    @click="handleClick"
-    @touchmove.prevent
-  >
+  <div class="l-overlay" v-show="show" :style="[{ 'z-index': zIndex, background: 'rgba(0,0,0,' + opacity + ')' }]" @click="handleClick" @touchmove.prevent>
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'KadOverlay',
+  name: 'lOverlay',
   props: {
     show: {
       type: Boolean,

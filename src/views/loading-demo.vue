@@ -1,23 +1,23 @@
 <template>
   <div class="loading-demo">
-    <kad-demo-block title="基本类型">
-      <kad-loading type="rotate"></kad-loading>
-      <kad-loading type="ball-rotate"></kad-loading>
-      <kad-loading type="scale"></kad-loading>
-      <kad-loading type="jelly"></kad-loading>
-    </kad-demo-block>
-    <kad-demo-block title="自定义颜色">
-      <kad-loading type="rotate" color="red"></kad-loading>
-      <kad-loading type="ball-rotate" color="red"></kad-loading>
-      <kad-loading type="scale" color="red"></kad-loading>
-      <kad-loading type="jelly" color="red"></kad-loading>
-    </kad-demo-block>
-    <kad-demo-block title="自定义大小">
-      <kad-loading type="rotate" color="red" size="30px"></kad-loading>
-      <kad-loading type="ball-rotate" color="red" size="30px"></kad-loading>
-      <kad-loading type="scale" color="red" size="30px"></kad-loading>
-      <kad-loading type="jelly" color="red" size="30px"></kad-loading>
-    </kad-demo-block>
+    <l-demo-block title="基本类型">
+      <l-loading type="rotate"></l-loading>
+      <l-loading type="ball-rotate"></l-loading>
+      <l-loading type="scale"></l-loading>
+      <l-loading type="jelly"></l-loading>
+    </l-demo-block>
+    <l-demo-block title="自定义颜色">
+      <l-loading type="rotate" color="red"></l-loading>
+      <l-loading type="ball-rotate" color="red"></l-loading>
+      <l-loading type="scale" color="red"></l-loading>
+      <l-loading type="jelly" color="red"></l-loading>
+    </l-demo-block>
+    <l-demo-block title="自定义大小">
+      <l-loading type="rotate" color="red" size="15px"></l-loading>
+      <l-loading type="ball-rotate" color="red" size="15px"></l-loading>
+      <l-loading type="scale" color="red" size="15px"></l-loading>
+      <l-loading type="jelly" color="red" size="15px"></l-loading>
+    </l-demo-block>
   </div>
 </template>
 
@@ -25,7 +25,7 @@
 export default {};
 </script>
 <style lang="less" scoped>
-.kad-loading {
-  margin: 0 40px;
+.l-loading {
+  margin: 0 20px;
 }
 </style>

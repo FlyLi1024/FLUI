@@ -1,8 +1,8 @@
 <template>
-  <div class="kad-tabbar-item" :value="value" @click="onChange(value)">
-    <div class="kad-tabbar-item__icon">
+  <div class="l-tabbar-item" :value="value" @click="onChange(value)">
+    <div class="l-tabbar-item__icon">
       <l-icon :icon="icon" :size="size" :color="tabbarColor" />
-      <div v-if="info && info !== ''" class="kad-tabbar-item__info">{{ info }}</div>
+      <div v-if="info && info !== ''" class="l-tabbar-item__info">{{ info }}</div>
     </div>
     <span :style="{ color: tabbarColor }">{{ label }}</span>
   </div>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'kadTabbarItem',
+  name: 'lTabbarItem',
   data() {
     return {
       isActive: false
@@ -39,7 +39,7 @@ export default {
     // 大小
     size: {
       type: String,
-      default: '40px'
+      default: '20px'
     },
     // 文本
     label: {

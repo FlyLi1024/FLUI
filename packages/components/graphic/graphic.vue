@@ -1,21 +1,5 @@
 <template>
-  <div
-    class="graphic"
-    :class="
-      theme === ''
-        ? 'graphic-theme0'
-        : theme === 'left'
-        ? 'graphic-theme1'
-        : theme === 'right'
-        ? 'graphic-theme2'
-        : theme === 'top'
-        ? 'graphic-theme3'
-        : theme === 'bottom'
-        ? 'graphic-theme4'
-        : ''
-    "
-    @click="handleClick"
-  >
+  <div class="graphic" :class="theme === '' ? 'graphic-theme0' : theme === 'left' ? 'graphic-theme1' : theme === 'right' ? 'graphic-theme2' : theme === 'top' ? 'graphic-theme3' : theme === 'bottom' ? 'graphic-theme4' : ''" @click="handleClick">
     <div class="graphic-img" v-if="theme !== ''">
       <img :src="image" alt="" />
     </div>
@@ -28,7 +12,7 @@
 
 <script>
 export default {
-  name: 'KadGraphic',
+  name: 'lGraphic',
   props: {
     //   图片位置,不填默认无图片
     theme: {

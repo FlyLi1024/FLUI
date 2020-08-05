@@ -1,51 +1,47 @@
 <template>
-  <span class="kad-tag" @click="handleClick" :style="[styles, { 'font-size': fixpx(size) }]">
+  <span class="l-tag" @click="handleClick" :style="[styles, { 'font-size': size }]">
     <slot></slot>
   </span>
 </template>
 
 <script>
-const { rootValue } = require('../../../config/index');
 export default {
-  name: 'KadTag',
+  name: 'lTag',
   props: {
     bgColor: {
       type: String,
-      default: '#323233',
+      default: '#323233'
     },
     color: {
       type: String,
-      default: '#323233',
+      default: '#323233'
     },
     size: {
       type: String,
-      default: '24px',
+      default: '12px'
     },
     round: {
       type: String,
-      default: '0',
+      default: '0'
     },
     plain: {
       type: Boolean,
-      default: false,
+      default: false
     },
     closeable: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   methods: {
-    fixpx(val) {
-      return parseInt(val, 0) / rootValue + 'rem';
-    },
     handleClick(evt) {
       this.$emit('click', evt);
-    },
+    }
   },
   computed: {
     styles() {
-      return this.plain ? { 'border-color': this.bgColor, color: this.bgColor, 'border-radius': this.fixpx(this.round) } : { background: this.bgColor, color: '#fff', 'border-color': this.bgColor, 'border-radius': this.fixpx(this.round) };
-    },
-  },
+      return this.plain ? { 'border-color': this.bgColor, color: this.bgColor, 'border-radius': this.round } : { background: this.bgColor, color: '#fff', 'border-color': this.bgColor, 'border-radius': this.round };
+    }
+  }
 };
 </script>

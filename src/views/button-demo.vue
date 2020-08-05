@@ -36,23 +36,22 @@
       <l-button type="primary" disabled>主要按钮</l-button>
       <l-button type="info" disabled>信息按钮</l-button>
       <l-button type="danger" disabled>危险按钮</l-button>
-      <l-button type="danger" disabled>危险按钮</l-button>
       <l-button type="warning" plain disabled>警告按钮</l-button>
     </l-demo-block>
 
     <l-demo-block title="自定义颜色">
-      <l-button color="#0e9aa7">自定义颜色</l-button>
+      <l-button color="#8da4d0">自定义颜色</l-button>
       <l-button plain color="#0e9aa7">自定义颜色</l-button>
-      <l-button round color="#ff9595">自定义颜色</l-button>
-      <l-button color="linear-gradient(-225deg, #ffc4a3 0%, #ff9a76 50%, #f96d80 100%)">线性渐变</l-button>
+      <l-button round color="#ff8294">自定义颜色</l-button>
+      <l-button color="linear-gradient(-225deg, #8da4d0 0%, #ff9a76 50%, #0e9aa7 100%)">线性渐变</l-button>
       <l-button color="radial-gradient(#ffc4a3, #ff9a76,#f96d80)">径向渐变</l-button>
     </l-demo-block>
 
     <l-demo-block title="图标按钮">
-      <l-button type="info" icon="add">添加</l-button>
-      <l-button color="red" icon="delete">删除</l-button>
-      <l-button color="#666" plain icon="add"></l-button>
-      <l-button color="#666" plain icon="reduce"></l-button>
+      <l-button color="#8da4d0" icon="add">添加</l-button>
+      <l-button color="#8da4d0" icon="delete">删除</l-button>
+      <l-button color="#8da4d0" size="small" plain icon="add"></l-button>
+      <l-button color="#8da4d0" size="small" plain icon="reduce"></l-button>
     </l-demo-block>
 
     <l-demo-block title="loading效果">

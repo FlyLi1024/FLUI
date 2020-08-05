@@ -1,33 +1,33 @@
 <template>
-  <div class="kad-tab-pane" v-show="visible">
+  <div class="l-tab-pane" v-show="visible">
     <slot v-if="!isLoading"></slot>
-    <div class="kad-tab-pane__loading" v-if="isLoading">
-      <kad-loading :type="loading" color="#666"></kad-loading>
+    <div class="l-tab-pane__loading" v-if="isLoading">
+      <l-loading :type="loading" color="#666"></l-loading>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'KadTabPane',
+  name: 'lTabPane',
   data() {
     return {
-      visible: false,
+      visible: false
     };
   },
   props: {
     title: {
       type: [String, Number],
-      required: true,
+      required: true
     },
     loading: {
       type: String,
-      default: 'rotate',
+      default: 'rotate'
     },
     loadingColor: {
       type: String,
-      default: '#666',
-    },
+      default: '#666'
+    }
   },
   computed: {
     aIndex() {
@@ -35,10 +35,10 @@ export default {
     },
     isLoading() {
       return this.$parent.loading;
-    },
+    }
   },
   mounted() {
     this.$parent.getNavList();
-  },
+  }
 };
 </script>

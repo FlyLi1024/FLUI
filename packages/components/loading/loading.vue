@@ -1,13 +1,13 @@
 <template>
-  <div class="kad-loading">
-    <div class="kad-clip-rotate" v-if="type === 'rotate'" :style="[rotateStyle, sizes]"></div>
-    <div class="kad-ball-clip-rotate" v-if="type === 'ball-rotate'">
+  <div class="l-loading">
+    <div class="l-clip-rotate" v-if="type === 'rotate'" :style="[rotateStyle, sizes]"></div>
+    <div class="l-ball-clip-rotate" v-if="type === 'ball-rotate'">
       <div :style="[ballRotateStyle, sizes]"></div>
     </div>
-    <div class="kad-ball-scale" v-if="type === 'scale'">
+    <div class="l-ball-scale" v-if="type === 'scale'">
       <div :style="[scaleStyle, sizes]"></div>
     </div>
-    <div class="kad-square-jelly-box" v-if="type === 'jelly'" :style="sizes">
+    <div class="l-square-jelly-box" v-if="type === 'jelly'" :style="sizes">
       <div :style="jellyStyle"></div>
       <div :style="jellyStyle"></div>
     </div>
@@ -15,27 +15,26 @@
 </template>
 
 <script>
-const { rootValue } = require('../../../config/index');
 export default {
-  name: 'kadLoading',
+  name: 'lLoading',
   props: {
     type: {
       type: String,
-      default: 'rotate',
+      default: 'rotate'
     },
     color: {
       type: String,
-      default: '#1989fa',
+      default: '#1989fa'
     },
     size: [String, Number],
     full: {
       type: Boolean,
-      default: false,
+      default: false
     },
     maskClose: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   data() {
     return {};
@@ -54,14 +53,9 @@ export default {
       return { 'background-color': this.color };
     },
     sizes() {
-      return { width: this.fixpx(this.size), height: this.fixpx(this.size) };
-    },
-  },
-  methods: {
-    fixpx(val) {
-      return parseInt(val, 0) / rootValue + 'rem';
-    },
-  },
+      return { width: this.size, height: this.size };
+    }
+  }
 };
 </script>
 <style lang="less" scoped></style>

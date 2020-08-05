@@ -1,7 +1,7 @@
 @import '../../style/mixin.less';
 @import '../../style/animation.less';
 
-.kad-toast {
+.l-toast {
   position: fixed;
   left: 0;
   top: 0;
@@ -21,7 +21,7 @@
     transform: translate(-50%, -50%);
     max-width: 70%;
     background: rgba(0, 0, 0, 0.7);
-    padding: 20px 26px;
+    padding: 10px 13px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,30 +31,30 @@
     color: #fff;
 
     .icon {
-      width: 80px;
-      padding: 20px;
-      font-size: 60px;
+      width: 40px;
+      padding: 10px;
+      font-size: 30px;
     }
 
     .l-icon {
-      font-size: 60px;
+      font-size: 30px;
     }
 
     .text {
-      font-size: 28px;
-      border-radius: 4px;
+      font-size: 14px;
+      border-radius: 2px;
       box-sizing: border-box;
       line-height: 1.5;
     }
 
     &.horizontal {
       flex-direction: row;
-      padding: 16px 20px;
+      padding: 8px 10px;
 
       .icon {
         width: auto;
-        font-size: 30px;
-        padding: 0 10px 0 0;
+        font-size: 15px;
+        padding: 0 5px 0 0;
       }
     }
   }

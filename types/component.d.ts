@@ -27,7 +27,6 @@ export class Graphic extends UIComponent {}
 export class Icon extends UIComponent {}
 export class Image extends UIComponent {}
 export class Loading extends UIComponent {}
-export class NoticeBar extends UIComponent {}
 export class Overlay extends UIComponent {}
 export class Popup extends UIComponent {}
 export class Radio extends UIComponent {}
@@ -48,7 +47,7 @@ export class Toast extends UIComponent {}
 
 declare module 'vue/types/vue' {
   interface Vue {
-    $ktoast: any;
+    $ltoast: any;
     $loadingStart: any;
     $loadingEnd: any;
   }

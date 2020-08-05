@@ -1,23 +1,23 @@
 <template>
   <div class="dialog-demo">
-    <kad-demo-block title="弹出框">
+    <l-demo-block title="弹出框">
       <l-button type="primary" @click="visible = true">弹出框</l-button>
-      <kad-dialog :visible.sync="visible" :title="titleText" :cancel-button="cancelButton" :mask-closable="maskClosable" :cancel-button-text="cancelButtonText" :confirm-button-text="confirmButtonText" :radius="radius" :transition="transition" @cancel="handleCancel" @confirm="handleConfirm">
+      <l-dialog :visible.sync="visible" :title="titleText" :cancel-button="cancelButton" :mask-closable="maskClosable" :cancel-button-text="cancelButtonText" :confirm-button-text="confirmButtonText" :radius="radius" :transition="transition" @cancel="handleCancel" @confirm="handleConfirm">
         是否清除历史
-      </kad-dialog>
-    </kad-demo-block>
-    <kad-demo-block title="选项">
+      </l-dialog>
+    </l-demo-block>
+    <l-demo-block title="选项">
       <div class="demo-row">
         <div class="left">显示标题</div>
-        <div class="right"><kad-switch v-model="title"></kad-switch></div>
+        <div class="right"><l-switch v-model="title"></l-switch></div>
       </div>
       <div class="demo-row">
         <div class="left">显示取消按钮</div>
-        <div class="right"><kad-switch v-model="cancelButton"></kad-switch></div>
+        <div class="right"><l-switch v-model="cancelButton"></l-switch></div>
       </div>
       <div class="demo-row">
         <div class="left">遮罩层可关闭</div>
-        <div class="right"><kad-switch v-model="maskClosable"></kad-switch></div>
+        <div class="right"><l-switch v-model="maskClosable"></l-switch></div>
       </div>
       <div class="demo-row">
         <div class="left">取消按钮文字</div>
@@ -35,7 +35,7 @@
         <div class="left">展示动画</div>
         <div class="right"><input type="text" v-model="transition" /></div>
       </div>
-    </kad-demo-block>
+    </l-demo-block>
   </div>
 </template>
 <script>
@@ -49,7 +49,7 @@ export default {
       cancelButtonText: '抗命',
       confirmButtonText: '遵旨',
       radius: '0',
-      transition: 'kad-scale'
+      transition: 'l-scale'
     };
   },
   computed: {
@@ -59,16 +59,16 @@ export default {
   },
   methods: {
     handleCancel() {
-      this.$ktoast(this.cancelButtonText);
+      this.$ltoast(this.cancelButtonText);
       setTimeout(() => {
-        this.$ktoast.close();
+        this.$ltoast.close();
       }, 1000);
       this.visible = false;
     },
     handleConfirm() {
-      this.$ktoast(this.confirmButtonText);
+      this.$ltoast(this.confirmButtonText);
       setTimeout(() => {
-        this.$ktoast.close();
+        this.$ltoast.close();
       }, 1000);
       this.visible = false;
     }
@@ -81,7 +81,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid #ededed;
-  padding: 16px;
+  padding: 8px;
   text-align: center;
   .left {
     display: block;
@@ -96,9 +96,9 @@ export default {
   }
 }
 input {
-  width: 300px;
-  height: 60px;
-  margin: 20px 0;
+  width: 150px;
+  height: 30px;
+  margin: 10px 0;
   border: 1px solid #d6d3d3;
   color: #666;
   text-align: center;

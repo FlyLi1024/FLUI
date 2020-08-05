@@ -1,12 +1,12 @@
 <template>
-  <div class="kad-tab">
-    <div class="kad-tab-nav" :style="{ 'border-bottom': border ? border : '1px solid #F0F0F0' }">
+  <div class="l-tab">
+    <div class="l-tab-nav" :style="{ 'border-bottom': border ? border : '1px solid #F0F0F0' }">
       <div class="item" :class="{ actv: index === aIndex }" :style="[setBorder, { color: index === aIndex ? activeColor : '#131313', 'border-right': index === navList.length - 1 ? '0' : border }]" ref="item" v-for="(item, index) in navList" :key="index" @click="handleClick(item.title, index)">
         <span>{{ item.title }}</span>
       </div>
       <div class="line" :style="[lineStyle, { background: activeColor }]" v-show="navList.length > 0"></div>
     </div>
-    <div class="kad-tab-content">
+    <div class="l-tab-content">
       <slot></slot>
     </div>
   </div>
@@ -14,43 +14,43 @@
 
 <script>
 export default {
-  name: 'KadTab',
+  name: 'lTab',
   data() {
     return {
       navList: [],
       aIndex: 0,
       lineStyle: {
         width: 0,
-        left: 0,
-      },
+        left: 0
+      }
     };
   },
   props: {
     value: {
       type: [String, Number],
-      default: 0,
+      default: 0
     },
     animated: {
       type: Boolean,
-      default: false,
+      default: false
     },
     loading: {
       type: Boolean,
-      default: false,
+      default: false
     },
     activeColor: {
       type: String,
-      default: '#3F99FF',
+      default: '#3F99FF'
     },
     border: {
       type: String,
-      default: '',
-    },
+      default: ''
+    }
   },
   computed: {
     setBorder() {
       return { 'border-right': this.border ? this.border : '0', 'border-top': this.border ? this.border : '0' };
-    },
+    }
   },
   mounted() {
     this.$nextTick(() => {
@@ -98,7 +98,7 @@ export default {
       this.$children[index].visible = true;
       this.lineStyle.width = this.$refs.item[index].clientWidth + 'px';
       this.lineStyle.left = this.$refs.item[index].offsetLeft + 'px';
-    },
-  },
+    }
+  }
 };
 </script>

@@ -1,12 +1,12 @@
 <template>
-  <div class="kad-tabbar">
+  <div class="l-tabbar">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'kadTabbar',
+  name: 'lTabbar',
   props: {
     //   基本颜色
     plain_color: {
