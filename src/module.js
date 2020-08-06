@@ -38,6 +38,10 @@ const Components = [
       {
         title: '单选框',
         component: 'radio'
+      },
+      {
+        title: '数字键盘',
+        component: 'keyboard'
       }
     ]
   },
