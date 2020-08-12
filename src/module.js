@@ -42,6 +42,10 @@ const Components = [
       {
         title: '数字键盘',
         component: 'keyboard'
+      },
+      {
+        title: '自定义轮播',
+        component: 'swipe'
       }
     ]
   },
