@@ -1,5 +1,6 @@
 <template>
   <div class="l-swiper-demo">
+    <!-- <p v-for="(item, index) in 20" :key="'a' + index">234</p> -->
     <l-demo-block title="基本使用(默认自动)，必须fixed布局" full>
       <l-swipe>
         <div class="l-swipe-slide" v-for="(item, index) in BannerList" :key="index">
@@ -7,7 +8,15 @@
         </div>
       </l-swipe>
     </l-demo-block>
-    <l-demo-block title="基本使用(默认自动)，必须fixed布局" full>
+    <l-demo-block title="指定下标" full>
+      <l-swipe direction="vertical" current="2">
+        <div class="l-swipe-slide" v-for="(item, index) in BannerList" :key="index">
+          <img :src="item" />
+          <span style="position: absolute; z-index: 100;">{{ index + 1 }}</span>
+        </div>
+      </l-swipe>
+    </l-demo-block>
+    <l-demo-block title="循环" full>
       <l-swipe direction="vertical">
         <div class="l-swipe-slide" v-for="(item, index) in BannerList" :key="index">
           <img :src="item" />
@@ -15,6 +24,7 @@
         </div>
       </l-swipe>
     </l-demo-block>
+    <!-- <p v-for="(item, index) in 20" :key="'b' + index">234</p> -->
   </div>
 </template>
 <script>
