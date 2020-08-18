@@ -9,7 +9,7 @@
       </l-swipe>
     </l-demo-block>
     <l-demo-block title="指定下标" full>
-      <l-swipe direction="vertical" current="2">
+      <l-swipe direction="vertical" current="1">
         <div class="l-swipe-slide" v-for="(item, index) in BannerList" :key="index">
           <img :src="item" />
           <span style="position: absolute; z-index: 100;">{{ index + 1 }}</span>

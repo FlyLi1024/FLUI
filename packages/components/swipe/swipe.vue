@@ -9,6 +9,7 @@
   </div>
 </template>
 <script>
+import Utils from '../../utils/utils';
 export default {
   name: 'lSwipe',
   props: {
@@ -122,20 +123,16 @@ export default {
       }
     },
     onTouchEnd(evt) {
+      Utils.cssTransform(this.swiperWrap, 'translateX');
       this.currentIndex = Math.round(-this.translateX / this.swiperSlide[0].offsetWidth);
-      // if (this.currentIndex < 0) {
-      //   this.currentIndex = 0;
-      // }
-      // if (this.currentIndex > this.swiperSlide.length - 1) {
-      //   this.currentIndex = this.swiperSlide.length - 1;
-      // }
+      if (this.currentIndex < 0) {
+        this.currentIndex = 0;
+      }
+      if (this.currentIndex > this.swiperSlide.length - 1) {
+        this.currentIndex = this.swiperSlide.length - 1;
+      }
       this.swiperWrap.style.transition = '0.3s ease-out';
 
-      if (this.deltaX < -this.swiperSlide[0].offsetWidth / 2 || this.deltaX < -50) {
-        this.currentIndex += 1;
-      } else if (this.deltaX > this.swiperSlide[0].offsetWidth / 2 || this.deltaX > 50) {
-        this.currentIndex -= 1;
-      }
       this.translateX = -this.currentIndex * this.swiperSlide[0].offsetWidth;
       this.swiperWrap.style.transform = `translateX(${this.translateX}px)`;
     }
